@@ -1,0 +1,1 @@
+This task demonstrates initializing a Git repository and performing the first commit.
