@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Task 11 — DOCTYPE & Elements</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .box { border: 1px solid #aaa; padding: 10px; border-radius: 6px; margin-block-end: 14px; }
+    .inline-demo span { background: yellow; padding: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>DOCTYPE and HTML Elements</h1>
+
+  <div class="box">
+    <h2>1. DOCTYPE</h2>
+    <p>The DOCTYPE for HTML5 is:</p>
+    <code>&lt;!doctype html&gt;</code>
+    <p>It tells the browser to use **standards mode** instead of quirks mode.</p>
+  </div>
+
+  <div class="box">
+    <h2>2. Block-level elements</h2>
+    <p>Block elements start on a new line and take full width.</p>
+    <ul>
+      <li>&lt;div&gt;</li>
+      <li>&lt;p&gt;</li>
+      <li>&lt;h1&gt;–&lt;h6&gt;</li>
+      <li>&lt;section&gt;</li>
+      <li>&lt;article&gt;</li>
+    </ul>
+
+    <p>Example:</p>
+    <div style="background:#eee; padding:10px;">I am a block element (DIV)</div>
+  </div>
+
+  <div class="box inline-demo">
+    <h2>3. Inline elements</h2>
+    <p>Inline elements do not start on a new line.</p>
+    <ul>
+      <li>&lt;span&gt;</li>
+      <li>&lt;a&gt;</li>
+      <li>&lt;strong&gt;</li>
+      <li>&lt;em&gt;</li>
+    </ul>
+
+    <p>Example:</p>
+    <p>
+      This is <span>an inline SPAN</span> inside a sentence.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>4. Self-closing (void) elements</h2>
+    <p>These elements have no closing tag:</p>
+    <ul>
+      <li>&lt;br&gt;</li>
+      <li>&lt;hr&gt;</li>
+      <li>&lt;img&gt;</li>
+      <li>&lt;meta&gt;</li>
+      <li>&lt;input&gt;</li>
+    </ul>
+
+    <p>Example:</p>
+    Line 1<br>Line 2 (because &lt;br&gt; is used)
+  </div>
+
+  <div class="box">
+    <h2>5. Semantic vs Non-semantic elements</h2>
+    <p><strong>Semantic elements</strong> describe meaning:</p>
+    <ul>
+      <li>&lt;header&gt;</li>
+      <li>&lt;nav&gt;</li>
+      <li>&lt;main&gt;</li>
+      <li>&lt;section&gt;</li>
+      <li>&lt;footer&gt;</li>
+    </ul>
+
+    <p><strong>Non-semantic elements</strong> do NOT describe meaning:</p>
+    <ul>
+      <li>&lt;div&gt;</li>
+      <li>&lt;span&gt;</li>
+    </ul>
+
+    <p>
+      Open <a href="semantic.html">semantic.html</a> for examples.
+    </p>
+  </div>
+
+</body>
+</html>
