@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Task 10 — data-* Deep Dive (Mini Product Demo)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Products — data-* Attributes Demo</h1>
+
+    <div class="controls">
+      <label for="filter">Filter by tag:</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="clothing">Clothing</option>
+        <option value="accessory">Accessory</option>
+        <option value="sale">Sale</option>
+      </select>
+      <button id="clear-cart">Clear Cart</button>
+      <div id="cart-summary">Cart: <span id="cart-count">0</span> items</div>
+    </div>
+
+    <section id="products" class="products">
+      <!-- Product cards with data-* attributes -->
+      <article class="card" data-id="p1" data-name="T-Shirt" data-price="249.00" data-discount="10" data-tags="clothing,sale">
+        <h3>T-Shirt</h3>
+        <p class="price">₹249</p>
+        <button class="btn details">Details</button>
+        <button class="btn add">Add to cart</button>
+      </article>
+
+      <article class="card" data-id="p2" data-name="Cap" data-price="149.00" data-discount="0" data-tags="accessory">
+        <h3>Cap</h3>
+        <p class="price">₹149</p>
+        <button class="btn details">Details</button>
+        <button class="btn add">Add to cart</button>
+      </article>
+
+      <article class="card" data-id="p3" data-name="Jeans" data-price="999.00" data-discount="15" data-tags="clothing">
+        <h3>Jeans</h3>
+        <p class="price">₹999</p>
+        <button class="btn details">Details</button>
+        <button class="btn add">Add to cart</button>
+      </article>
+    </section>
+
+    <aside id="detail" class="detail" aria-live="polite">
+      <h2>Product details</h2>
+      <div id="detail-content">Click a product's <em>Details</em> button to view metadata</div>
+    </aside>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
