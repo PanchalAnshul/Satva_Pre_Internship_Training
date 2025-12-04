@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Task 04 — Images</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; max-inline-size: 900px; }
+    .example { margin-block-end: 28px; }
+    img { max-inline-size: 100%; block-size: auto; border: 1px solid #ddd; padding: 6px; border-radius: 6px; }
+    .caption { font-size: 0.9rem; color: #444; margin-block-start: 6px; }
+  </style>
+</head>
+<body>
+  <h1>HTML Images — Task 04</h1>
+
+  <div class="example">
+    <h2>1. Basic image with alt</h2>
+    <img src="images/sample.jpg" alt="Sample image (small)">
+    <div class="caption">Always include <code>alt</code> text for accessibility.</div>
+  </div>
+
+  <div class="example">
+    <h2>2. Responsive image (srcset)</h2>
+    <p>Browsers will pick the best image based on device pixel ratio or width.</p>
+    <img src="images/sample.jpg"
+         srcset="images/sample.jpg 1x, images/sample@2x.jpg 2x"
+         alt="Responsive sample">
+    <div class="caption">Use <code>srcset</code> for @2x / high-DPI images.</div>
+  </div>
+
+  <div class="example">
+    <h2>3. Picture element for art direction</h2>
+    <p>Serve different images for different viewport widths.</p>
+    <picture>
+      <source media="(min-inline-size: 800px)" srcset="images/sample-large.jpg">
+      <source media="(min-inline-size: 400px)" srcset="images/sample-medium.jpg">
+      <img src="images/sample.jpg" alt="Picture element example">
+    </picture>
+    <div class="caption">The browser uses the first matching <code>&lt;source&gt;</code>.</div>
+  </div>
+
+  <div class="example">
+    <h2>4. Decorative image (empty alt)</h2>
+    <p>If an image is purely decorative, use an empty alt: <code>alt=""</code>.</p>
+    <img src="images/decorative.svg" alt="">
+    <div class="caption">Screen readers will ignore images with empty alt.</div>
+  </div>
+
+  <div class="example">
+    <h2>5. Image lazy-loading (native)</h2>
+    <p>Use <code>loading="lazy"</code> to defer offscreen images.</p>
+    <img src="images/sample.jpg" alt="Lazy loaded" loading="lazy">
+    <div class="caption">Improves page performance for large pages.</div>
+  </div>
+
+  <hr>
+  <p><small>Open the page in a browser and inspect images with DevTools (Network tab) to see which file was loaded.</small></p>
+</body>
+</html>
