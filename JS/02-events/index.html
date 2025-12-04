@@ -6,17 +6,27 @@
   <style>
     body { font-family: Arial; padding: 20px; }
     button { padding: 8px 14px; margin-bottom: 10px; }
-    #output { margin-top: 15px; padding: 10px; border: 1px solid #ccc; min-height: 40px; }
+    input { padding: 8px; margin-top: 10px; width: 250px; }
+    #output { 
+      margin-top: 15px; 
+      padding: 12px; 
+      border: 1px solid #ccc; 
+      min-height: 40px; 
+      background: #fafafa;
+    }
   </style>
 </head>
 <body>
 
   <h1>JS Task 02 — Events</h1>
 
-  <button id="btnClick">Click Me</button> <br><br>
+  <h3>1️⃣ Click Event</h3>
+  <button id="btnClick">Click Me</button>
 
-  <input id="textInput" placeholder="Type something…" /> <br><br>
+  <h3>2️⃣ Keyup Event</h3>
+  <input id="textInput" placeholder="Type something…" />
 
+  <h3>3️⃣ Mouse Events</h3>
   <button id="hoverBtn">Hover Over Me</button>
 
   <div id="output">Event output will appear here…</div>
