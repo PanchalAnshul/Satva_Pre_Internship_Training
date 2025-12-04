@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Task 12 — Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>HTML Events — Task 12</h1>
+
+    <section class="box">
+      <h2>1. Click events</h2>
+      <button id="btn-click">Click me</button>
+      <p id="click-output">No clicks yet.</p>
+    </section>
+
+    <section class="box">
+      <h2>2. Double-click and mouseover</h2>
+      <div id="hover-box" style="padding:12px;border:1px solid #ccc;display:inline-block;">
+        Hover or double-click me
+      </div>
+      <p id="hover-output"></p>
+    </section>
+
+    <section class="box">
+      <h2>3. Keyboard events</h2>
+      <input id="input-key" placeholder="Type here and press keys" />
+      <p id="key-output">Last key: —</p>
+    </section>
+
+    <section class="box">
+      <h2>4. Form submit (preventDefault)</h2>
+      <form id="sample-form">
+        <label for="fname">Name</label>
+        <input id="fname" name="fname" required />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="form-output"></p>
+    </section>
+
+    <section class="box">
+      <h2>5. Event delegation & bubbling</h2>
+      <ul id="todo-list">
+        <li data-id="1">Buy milk <button class="del">Delete</button></li>
+        <li data-id="2">Read book <button class="del">Delete</button></li>
+        <li data-id="3">Learn JS <button class="del">Delete</button></li>
+      </ul>
+      <p id="todo-output">Use the delete buttons — event delegation handles them.</p>
+    </section>
+
+    <section class="box">
+      <h2>6. Touch event (mobile)</h2>
+      <div id="touch-area" style="inline-size:200px;block-size:120px;border:1px dashed #888;display:flex;align-items:center;justify-content:center;">
+        Touch here (or click)
+      </div>
+      <p id="touch-output"></p>
+    </section>
+
+    <hr />
+    <p><small>Open DevTools → Console to see event objects and propagation logs.</small></p>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
