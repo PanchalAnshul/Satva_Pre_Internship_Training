@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Task 09 — Attributes & Custom Data Attributes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-inline-size: 900px; }
+    section { margin-block-end: 30px; padding: 15px; border-inline-start: 5px solid #ddd; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      background: royalblue;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Attributes — Task 09</h1>
+
+<section>
+  <h2>1. Global Attributes</h2>
+  <p>These attributes can be used on almost all HTML elements:</p>
+
+  <ul>
+    <li><code>id</code> — unique identifier</li>
+    <li><code>class</code> — used for styling and JS</li>
+    <li><code>title</code> — tooltip text</li>
+    <li><code>style</code> — inline CSS</li>
+    <li><code>hidden</code> — hides the element</li>
+    <li><code>contenteditable</code> — make element editable</li>
+    <li><code>draggable</code> — enable drag behavior</li>
+    <li><code>tabindex</code> — keyboard focus order</li>
+  </ul>
+
+  <div id="edit-box" contenteditable="true" style="border:1px solid #aaa; padding:8px; margin-block-start:8px;">
+    You can edit this text because of <code>contenteditable="true"</code>.
+  </div>
+
+</section>
+
+<section>
+  <h2>2. Title Attribute (Tooltip)</h2>
+  <p>
+    Hover over this word: 
+    <span title="This is a tooltip example!">tooltip</span>
+  </p>
+</section>
+
+<section>
+  <h2>3. Hidden Attribute</h2>
+  <p hidden>This paragraph is hidden using <code>hidden</code> attribute.</p>
+  <p><small>(Check page source to confirm it's present in DOM.)</small></p>
+</section>
+
+<section>
+  <h2>4. Draggable Attribute</h2>
+  <p draggable="true" style="background:#eef; padding:10px; inline-size:200px;">
+    You can drag this element.
+  </p>
+</section>
+
+<section>
+  <h2>5. Tabindex</h2>
+  <p>Press <strong>Tab</strong> to see custom focus order:</p>
+  <input tabindex="2" placeholder="Input 2 (tabindex=2)">
+  <input tabindex="1" placeholder="Input 1 (tabindex=1)">
+  <input tabindex="3" placeholder="Input 3 (tabindex=3)">
+</section>
+
+<section>
+  <h2>6. Custom Data Attributes (data-*)</h2>
+  <p>These store extra information used by JavaScript.</p>
+
+  <button class="btn"
+          data-userid="42"
+          data-role="admin"
+          id="btn-info">
+    Show User Info
+  </button>
+
+  <p id="output" style="margin-block-start:10px;font-weight:bold;"></p>
+
+  <script>
+    const btn = document.getElementById("btn-info");
+    const out = document.getElementById("output");
+
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.userid;
+      const role = btn.dataset.role;
+      out.textContent = `User ID: ${id}, Role: ${role}`;
+    });
+  </script>
+</section>
+
+</body>
+</html>
