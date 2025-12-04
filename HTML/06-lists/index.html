@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Task 06 — Lists</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; max-inline-size: 900px; }
+    section { margin-block-end: 28px; border-inline-start: 4px solid #e3e3e3; padding: 12px 16px; border-radius:6px; }
+    h1,h2 { margin: 8px 0; }
+    code { background:#f4f4f4; padding:2px 6px; border-radius:4px; }
+    .example { margin-block-start: 10px; }
+    .inline-list { list-style:none; padding:0; display:flex; gap:10px; }
+  </style>
+</head>
+<body>
+  <h1>HTML Lists — Task 06</h1>
+
+  <section id="unordered">
+    <h2>Unordered list (&lt;ul&gt;)</h2>
+    <p>Use for lists where order doesn't matter.</p>
+    <ul>
+      <li>Milk</li>
+      <li>Bread</li>
+      <li>Eggs</li>
+    </ul>
+  </section>
+
+  <section id="ordered">
+    <h2>Ordered list (&lt;ol&gt;)</h2>
+    <p>Use when sequence or priority matters.</p>
+    <ol>
+      <li>Install Node.js</li>
+      <li>Set up project</li>
+      <li>Run tests</li>
+    </ol>
+  </section>
+
+  <section id="description">
+    <h2>Description list (&lt;dl&gt;)</h2>
+    <p>Best for term → definition pairs.</p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language — structure of web pages.</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets — presentation and layout.</dd>
+      <dt>JS</dt>
+      <dd>JavaScript — interactive behavior.</dd>
+    </dl>
+  </section>
+
+  <section id="nested">
+    <h2>Nested lists</h2>
+    <p>Combine &lt;ul&gt; or &lt;ol&gt; inside list items.</p>
+    <ul>
+      <li>Fruits
+        <ol>
+          <li>Apple</li>
+          <li>Banana</li>
+        </ol>
+      </li>
+      <li>Vegetables
+        <ul>
+          <li>Carrot</li>
+          <li>Spinach</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="inline">
+    <h2>Inline / horizontal list</h2>
+    <p>Useful for navs or tags.</p>
+    <ul class="inline-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </section>
+
+  <section id="accessibility">
+    <h2>Accessiblity tips</h2>
+    <ul>
+      <li>Use semantic lists for screen readers.</li>
+      <li>Use descriptive text in list items — not just links like “click here”.</li>
+      <li>For long lists, provide headings and grouping.</li>
+    </ul>
+  </section>
+
+  <hr>
+  <p><small>Try editing list styles in DevTools (list-style-type, margin, padding) to see how layout changes.</small></p>
+</body>
+</html>
