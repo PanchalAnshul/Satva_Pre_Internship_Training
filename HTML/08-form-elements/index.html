@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Task 08 — Form Elements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-inline-size: 900px; }
+    .group { margin-block-end: 20px; }
+    label { font-weight: bold; display: block; margin-block-end: 6px; }
+    input, select, textarea {
+      padding: 8px;
+      inline-size: 100%;
+      max-inline-size: 350px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+    .range-output {
+      font-size: 1.2rem;
+      margin-inline-start: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Form Elements — Task 08</h1>
+
+<form>
+
+  <!-- Search Input -->
+  <div class="group">
+    <label for="search">Search</label>
+    <input type="search" id="search" name="search" placeholder="Search something...">
+  </div>
+
+  <!-- URL -->
+  <div class="group">
+    <label for="url">Website URL</label>
+    <input type="url" id="url" name="url" placeholder="https://example.com">
+  </div>
+
+  <!-- Telephone -->
+  <div class="group">
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit mobile number">
+  </div>
+
+  <!-- Date Input -->
+  <div class="group">
+    <label for="date">Select Date</label>
+    <input type="date" id="date" name="date">
+  </div>
+
+  <!-- Time Input -->
+  <div class="group">
+    <label for="time">Select Time</label>
+    <input type="time" id="time" name="time">
+  </div>
+
+  <!-- Month Input -->
+  <div class="group">
+    <label for="month">Select Month</label>
+    <input type="month" id="month" name="month">
+  </div>
+
+  <!-- Week Input -->
+  <div class="group">
+    <label for="week">Select Week</label>
+    <input type="week" id="week" name="week">
+  </div>
+
+  <!-- Datetime Local -->
+  <div class="group">
+    <label for="dt">Date & Time (Local)</label>
+    <input type="datetime-local" id="dt" name="dt">
+  </div>
+
+  <!-- Color Picker -->
+  <div class="group">
+    <label for="color">Pick a Color</label>
+    <input type="color" id="color" name="color" value="#ff6600">
+  </div>
+
+  <!-- Range Slider -->
+  <div class="group">
+    <label for="volume">Volume (0–100)</label>
+    <input type="range" id="volume" min="0" max="100" value="50"
+           oninput="document.getElementById('out').textContent = this.value;">
+    <span id="out" class="range-output">50</span>
+  </div>
+
+  <!-- Datalist -->
+  <div class="group">
+    <label for="browser">Choose Browser (Datalist)</label>
+    <input list="browsers" id="browser" name="browser" placeholder="Start typing...">
+    
+    <datalist id="browsers">
+      <option value="Google Chrome">
+      <option value="Firefox">
+      <option value="Brave">
+      <option value="Safari">
+      <option value="Edge">
+    </datalist>
+  </div>
+
+  <!-- Hidden Input -->
+  <div class="group">
+    <label>Hidden Input (not visible)</label>
+    <input type="hidden" name="userid" value="12345">
+    <p><small>This value is submitted automatically.</small></p>
+  </div>
+
+  <!-- File Upload -->
+  <div class="group">
+    <label for="file">Upload an Image</label>
+    <input type="file" id="file" accept="image/*">
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit Form</button>
+
+</form>
+
+</body>
+</html>
