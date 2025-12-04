@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>JS Task 01 — Introduction to JavaScript</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; max-inline-size: 900px; margin: 28px auto; padding: 0 16px; }
+    header { margin-block-end: 18px; }
+    .box { border: 1px solid #e0e0e0; padding: 14px; border-radius: 8px; background:#fff; box-shadow: 0 6px 14px rgba(0,0,0,0.03); }
+    button { margin-inline-end:8px; padding:8px 12px; border-radius:6px; border:0; cursor:pointer; background:#007bff; color:#fff; }
+    #output { margin-block-start:12px; padding:10px; border:1px dashed #ddd; border-radius:6px; background:#fafafa; white-space:pre-wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JS Task 01 — Introduction</h1>
+    <p class="lead">Small page to demonstrate basic JavaScript usage in browser.</p>
+  </header>
+
+  <section class="box">
+    <h2>Console & Alerts</h2>
+    <p>Open your browser DevTools → Console to see messages from <code>console.log</code>.</p>
+    <button id="btn-alert">Show alert()</button>
+    <button id="btn-prompt">Show prompt()</button>
+    <button id="btn-console">Console message</button>
+  </section>
+
+  <section class="box" style="margin-block-start:12px;">
+    <h2>DOM Interaction</h2>
+    <label for="name">Enter your name:</label>
+    <input id="name" type="text" placeholder="Type name" />
+    <button id="btn-greet">Greet</button>
+
+    <div id="output" aria-live="polite">Greeting output will appear here.</div>
+  </section>
+
+  <section class="box" style="margin-block-start:12px;">
+    <h2>Quick Examples</h2>
+    <ol>
+      <li>Show current date/time</li>
+      <li>Calculate 2 + 3 and show result in console</li>
+    </ol>
+    <button id="btn-date">Show Date/Time</button>
+  </section>
+
+  <!-- External script with defer so DOM is ready -->
+  <script src="script.js" defer></script>
+</body>
+</html>
