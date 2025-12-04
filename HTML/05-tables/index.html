@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Task 05 — Tables</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 980px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f4f4f4; }
+    caption { font-weight: bold; margin-bottom: 8px; }
+    .example { margin-bottom: 28px; }
+  </style>
+</head>
+<body>
+  <h1>HTML Tables — Task 05</h1>
+
+  <div class="example">
+    <h2>1. Basic table with header and body</h2>
+    <table>
+      <caption>Employees</caption>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Anshul</td><td>Intern</td></tr>
+        <tr><td>2</td><td>Jeshal</td><td>Trainer</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example">
+    <h2>2. Colspan and Rowspan</h2>
+    <table>
+      <tr>
+        <th>Month</th>
+        <th colspan="2">Sales (units)</th>
+      </tr>
+      <tr>
+        <td>Jan</td>
+        <td>100</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Feb - Mar</td>
+        <td>200</td>
+        <td>250</td>
+      </tr>
+      <tr>
+        <td>180</td>
+        <td>210</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <h2>3. Table with footer</h2>
+    <table>
+      <caption>Grades</caption>
+      <thead>
+        <tr><th>Student</th><th>Marks</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Rohit</td><td>85</td></tr>
+        <tr><td>Riya</td><td>92</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>Average</td><td>88.5</td></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="example">
+    <h2>4. Accessibility and semantics</h2>
+    <p>Use <code>scope="col"</code> and <code>scope="row"</code> for headers to help screen readers.</p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+          <th scope="col">In stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">T-shirt</th>
+          <td>$12</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <th scope="row">Cap</th>
+          <td>$8</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+  <p><small>Try adding CSS styling and responsive behavior (wrap tables in a container with overflow:auto for mobile).</small></p>
+</body>
+</html>
