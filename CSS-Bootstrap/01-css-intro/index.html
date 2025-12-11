@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Intro</title>
+</head>
+<body>
+  <h1>What is CSS?</h1>
+  <p>CSS (Cascading Style Sheets) separates presentation (look) from structure (HTML).</p>
+
+  <h2>Ways to use CSS:</h2>
+  <ul>
+    <li>Inline: <code>&lt;h3 style="color:blue"&gt;Hello&lt;/h3&gt;</code></li>
+    <li>Internal: a &lt;style&gt; block in the &lt;head&gt;</li>
+    <li>External: link a separate <code>.css</code> file</li>
+  </ul>
+
+  <h3 style="color:blue">Inline example</h3>
+
+  <style>
+    /* internal example */
+    p { color: #333; font-family: Arial, sans-serif; }
+    .note { background:#f0f8ff; padding:8px; border-inline-start:4px solid #6ca0ff; }
+  </style>
+
+  <p class="note">This is styled by an internal stylesheet.</p>
+</body>
+</html>
