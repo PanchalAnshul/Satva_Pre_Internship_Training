@@ -1,0 +1,9 @@
+/* styles.css - selector examples */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 24px; color:#222; }
+h1 { color: #2b6cb0; }
+p.lead { font-size: 1.1rem; color: #444; }
+.card { border: 1px solid #ddd; padding: 12px; border-radius: 6px; background: #fff; inline-size: 320px; }
+.alert { padding:8px 12px; border-radius:4px; margin:8px 0; }
+.alert-success { background:#e6ffed; border:1px solid #b7f1c6; }
+.alert-error { background:#ffecec; border:1px solid #f2b2b2; }
+.container { display:flex; gap:16px; flex-wrap:wrap; margin-block-start:12px; }
