@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery Task 01 — Intro</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- CDN jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <style>
+    body{font-family:Arial; padding:18px; max-inline-size:900px}
+    .highlight{background:#fff9c4}
+    #log{white-space:pre-wrap; border:1px solid #eee; padding:8px; block-size:120px; overflow:auto}
+    button{margin:6px}
+  </style>
+</head>
+<body>
+  <h1>jQuery — Intro (Task 01)</h1>
+
+  <p><strong>Objective:</strong> learn selection, manipulation, events, simple effects and a tiny AJAX demo.</p>
+
+  <div id="controls">
+    <button id="btnText">Change Text</button>
+    <button id="btnToggle">Toggle Highlight</button>
+    <button id="btnFade">Fade Box</button>
+    <button id="btnAjax">Fetch Quote</button>
+  </div>
+
+  <div id="box" style="margin-block-start:12px; padding:12px; border:1px solid #ddd;">
+    <h2 id="title">I am a title</h2>
+    <p id="desc">Some description here. Click buttons above to see jQuery in action.</p>
+  </div>
+
+  <h3>Item list (delegation demo)</h3>
+  <ul id="items">
+    <li data-id="1">Item 1</li>
+    <li data-id="2">Item 2</li>
+  </ul>
+  <button id="addItem">Add Item</button>
+
+  <h3>Log</h3>
+  <div id="log"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
