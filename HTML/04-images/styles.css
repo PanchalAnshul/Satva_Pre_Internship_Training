@@ -1,0 +1,22 @@
+    .image-box {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-block-end: 25px;
+    }
+
+    .float-left {
+      float: inline-start;
+      margin-inline-end: 15px;
+    }
+
+    .float-right {
+      float: inline-end;
+      margin-inline-start: 15px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
