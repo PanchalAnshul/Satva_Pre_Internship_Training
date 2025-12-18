@@ -1,29 +1,41 @@
-# Task 12 — Events
+# HTML Events  
+Complete interactive guide covering all major HTML events concepts.
 
-## Objective
-Learn and practice:
-- addEventListener for click, dblclick, mouseover, mouseout
-- keyboard events: keydown
-- form submit and preventing default behavior
-- event delegation and bubbling/stopPropagation
-- touch events for mobile
-- event object inspection
+### 1. Mouse Events 
+- `onclick` - Fires when element is clicked
+- `ondblclick` - Fires on double click
+- `onmouseenter` - Mouse pointer enters element
+- `onmouseleave` - Mouse pointer leaves element
 
-## Files
-- index.html
-- app.js
-- styles.css (optional)
+### 2. Keyboard Events 
+- `onkeydown` - Key is pressed down
+- `onkeyup` - Key is released
+- `onkeypress` - Key is pressed (older method)
 
-## Steps I performed
-1. Implemented click, dblclick, mouseover, and keyboard handlers.
-2. Built a form submit handler using `preventDefault()`.
-3. Used event delegation to handle dynamic list buttons.
-4. Added touchstart/touchend handlers.
-5. Tested event propagation and used `stopPropagation()` in delegated handler.
+### 3. Form Events 
+- `onsubmit` - Form is submitted
+- `onchange` - Element value changes
+- `oninput` - Input value changes (real-time)
 
-## Git Commands
-```bash
-git checkout -b html-task-12-events
-git add HTML/12-events
-git commit -m "HTML Task 12: Add events examples (click, keyboard, form, delegation, touch)"
-git push --set-upstream origin html-task-12-events
+### 6. Clipboard Events 📋
+- `oncopy` - User copies content
+- `oncut` - User cuts content
+- `onpaste` - User pastes content
+
+### 7. Drag Events 
+- `ondragstart` - User starts dragging
+- `ondrop` - Dragged item is dropped
+- `ondragover` - Element is dragged over drop zone
+
+---
+
+## Event Categories Summary
+
+| Category | Events | Use For |
+|----------|--------|---------|
+|  Mouse | click, dblclick, hover | Button clicks, hovers |
+|  Keyboard | keydown, keyup | Text input, shortcuts |
+|  Form | submit, change | Form handling |
+|  Clipboard | copy, cut, paste | Copy/paste actions |
+|  Drag | dragstart, drop | Drag & drop |
+

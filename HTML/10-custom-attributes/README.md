@@ -1,26 +1,44 @@
-# Task 10 — Custom data-* Attributes Deep Dive + Mini Project
+# Data Attributes Demo 📦
 
-## Objective
-- Use `data-*` attributes to store metadata on DOM elements
-- Read / update them via `element.dataset` in JS
-- Implement a small interactive UI: details view, cart (localStorage), and filter by tags
-- Understand how data attributes connect HTML and JavaScript in real projects
+Simple demo showing how custom `data-*` attributes work in HTML.
 
-## Files
-- index.html
-- styles.css
-- app.js
+## What are Data Attributes?
 
-## How to run
-1. Open `index.html` in a browser (or use Live Server in VS Code).
-2. Click **Details** on a product to view metadata loaded from `data-*`.
-3. Click **Add to cart** to add product ID to a simple cart (stored in localStorage).
-4. Use the **Filter by tag** dropdown to show/hide products by tag.
-5. Notice that price for first product updates after 2 seconds (demonstrates dynamic dataset updates).
+Custom HTML attributes that store extra information on elements.
 
-## Git Commands
-```bash
-git checkout -b html-task-10-data-attributes
-git add HTML/10-custom-attributes
-git commit -m "HTML Task 10: Add data-* attributes demo + mini cart"
-git push --set-upstream origin html-task-10-data-attributes
+```html
+<div data-id="123" data-name="Product" data-price="299">
+```
+
+## Key Concept
+
+**HTML Side:**
+```html
+<div class="card" data-id="p1" data-name="T-Shirt" data-price="249">
+```
+
+**JavaScript Side:**
+```javascript
+const card = document.querySelector('.card');
+const id = card.dataset.id;        // "p1"
+const name = card.dataset.name;    // "T-Shirt"
+const price = card.dataset.price;  // "249"
+```
+
+## Rules
+
+✅ Start with `data-`
+✅ Use lowercase and hyphens: `data-user-name`
+✅ Access via `element.dataset.userName` (camelCase)
+✅ Store any text value
+
+## Why Use Them?
+
+✅ Store metadata without hidden fields
+✅ Clean, valid HTML
+✅ Easy JavaScript access
+✅ Perfect for dynamic content
+
+---
+
+**Simple concept: Store data in HTML, read with JavaScript!** 🚀

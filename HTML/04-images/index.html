@@ -1,60 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>HTML Task 04 — Images</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>HTML Images – Chapter Summary</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; max-inline-size: 900px; }
-    .example { margin-block-end: 28px; }
-    img { max-inline-size: 100%; block-size: auto; border: 1px solid #ddd; padding: 6px; border-radius: 6px; }
-    .caption { font-size: 0.9rem; color: #444; margin-block-start: 6px; }
+    .image-box {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .float-left {
+      float: left;
+      margin-right: 15px;
+    }
+
+    .float-right {
+      float: right;
+      margin-left: 15px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   </style>
 </head>
+
 <body>
-  <h1>HTML Images — Task 04</h1>
 
-  <div class="example">
-    <h2>1. Basic image with alt</h2>
-    <img src="images/sample.jpg" alt="Sample image (small)">
-    <div class="caption">Always include <code>alt</code> text for accessibility.</div>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">HTML Images</h2>
+
+  <!-- 1. Basic Image -->
+  <div class="image-box">
+    <h5>1. Using &lt;img&gt; Element</h5>
+    <img src="https://picsum.photos/300/180" alt="Basic HTML image">
+    <p class="mt-2">The <code>&lt;img&gt;</code> tag is used to display images in HTML.</p>
   </div>
 
-  <div class="example">
-    <h2>2. Responsive image (srcset)</h2>
-    <p>Browsers will pick the best image based on device pixel ratio or width.</p>
-    <img src="images/sample.jpg"
-         srcset="images/sample.jpg 1x, images/sample@2x.jpg 2x"
-         alt="Responsive sample">
-    <div class="caption">Use <code>srcset</code> for @2x / high-DPI images.</div>
+  <!-- 2. src and alt -->
+  <div class="image-box">
+    <h5>2. src and alt Attributes</h5>
+    <img src="https://picsum.photos/400/200" alt="Image with alt text" class="img-fluid">
+    <p class="mt-2">
+      <code>src</code> defines the image URL and <code>alt</code> provides alternate text if the image cannot load.
+    </p>
   </div>
 
-  <div class="example">
-    <h2>3. Picture element for art direction</h2>
-    <p>Serve different images for different viewport widths.</p>
-    <picture>
-      <source media="(min-inline-size: 800px)" srcset="images/sample-large.jpg">
-      <source media="(min-inline-size: 400px)" srcset="images/sample-medium.jpg">
-      <img src="images/sample.jpg" alt="Picture element example">
-    </picture>
-    <div class="caption">The browser uses the first matching <code>&lt;source&gt;</code>.</div>
+  <!-- 3. Width and Height -->
+  <div class="image-box">
+    <h5>3. Image Size using Width & Height</h5>
+    <img src="https://picsum.photos/500/300" alt="Sized image" width="250" height="150">
+    <p class="mt-2">
+      Image size can be controlled using HTML attributes or CSS properties.
+    </p>
   </div>
 
-  <div class="example">
-    <h2>4. Decorative image (empty alt)</h2>
-    <p>If an image is purely decorative, use an empty alt: <code>alt=""</code>.</p>
-    <img src="images/decorative.svg" alt="">
-    <div class="caption">Screen readers will ignore images with empty alt.</div>
+  <!-- 4. Float Left -->
+  <div class="image-box clearfix">
+    <h5>4. Floating Image Left</h5>
+    <img src="https://picsum.photos/200/150" alt="Float left image" class="float-left">
+    <p>
+      The CSS <code>float: left</code> property allows text to wrap around the image on the right side.
+      This is commonly used in articles and blogs.
+    </p>
   </div>
 
-  <div class="example">
-    <h2>5. Image lazy-loading (native)</h2>
-    <p>Use <code>loading="lazy"</code> to defer offscreen images.</p>
-    <img src="images/sample.jpg" alt="Lazy loaded" loading="lazy">
-    <div class="caption">Improves page performance for large pages.</div>
+  <!-- 5. Float Right -->
+  <div class="image-box clearfix">
+    <h5>5. Floating Image Right</h5>
+    <img src="https://picsum.photos/200/150" alt="Float right image" class="float-right">
+    <p>
+      The CSS <code>float: right</code> property allows text to wrap around the image on the left side.
+      Floating images helps in better layout design.
+    </p>
   </div>
 
-  <hr>
-  <p><small>Open the page in a browser and inspect images with DevTools (Network tab) to see which file was loaded.</small></p>
+</div>
+
 </body>
 </html>

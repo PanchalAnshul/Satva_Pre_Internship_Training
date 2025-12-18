@@ -1,84 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>HTML Task 03 — Links</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; max-inline-size: 900px; }
-    nav a { margin-inline-end: 12px; }
-    section { margin-block-start: 36px; padding: 12px; border: 1px solid #eee; border-radius: 6px; }
-    code { background:#f4f4f4; padding:2px 6px; border-radius:4px; }
-  </style>
+  <meta charset="UTF-8">
+  <title>HTML Links – Styled</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>HTML Links — Task 03</h1>
 
-  <p>This page contains examples of links you must know for web development.</p>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">HTML Links Examples</h2>
 
-  <nav>
-    <!-- internal anchor links -->
-    <a href="#external">External</a>
-    <a href="#internal">Internal</a>
-    <a href="#relative">Relative</a>
-    <a href="#mailto">Email / Tel</a>
-    <a href="#download">Download</a>
-  </nav>
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Basic Links</h5>
+      <a href="https://www.google.com" target="_blank" class="link-primary">Google</a><br>
+      <a href="https://github.com/PanchalAnshul/Satva_Pre_Internship_Training" target="_blank" class="link-info">Satva pre-internship Git Repo</a>
+    </div>
+  </div>
 
-  <section id="external">
-    <h2>External links</h2>
-    <p>
-      Example (open in new tab safely):
-      <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools (new tab)</a>
-    </p>
-    <p>
-      Same domain link (normal): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML</a>
-    </p>
-  </section>
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Button Links (Bootstrap)</h5>
+      <a href="https://www.linkedin.com/in/anshul-panchal-2385601b5" class="btn btn-primary me-2" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com" class="btn btn-danger" target="_blank">YouTube</a>
+    </div>
+  </div>
 
-  <section id="internal">
-    <h2>Internal anchor links (page sections)</h2>
-    <p>Click to jump:</p>
-    <ul>
-      <li><a href="#internal-example">Go to example paragraph</a></li>
-    </ul>
+ 
+  <!-- Email Link -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5>Email Link</h5>
+      <a href="mailto:anshulpanchal0909@gmail.com" class="btn btn-success">
+        Send Email
+      </a>
+    </div>
+  </div>
 
-    <p id="internal-example" style="margin-block-start:40px;">
-      This is the internal example paragraph. Using <code>id</code> lets you link to specific parts of the page.
-    </p>
-  </section>
+  <!-- Button as Link -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5>Button as Link</h5>
+      <button class="btn btn-warning"
+        onclick="document.location='https://www.w3schools.com/html/'">
+        HTML Tutorial
+      </button>
+    </div>
+  </div>
 
-  <section id="relative">
-    <h2>Relative links (local files)</h2>
-    <p>
-      If you have another file in the same folder (for example <code>other.html</code>), link it with:
-      <code>&lt;a href="other.html"&gt;Open other page&lt;/a&gt;</code>
-    </p>
-    <p>
-      Example linking a sibling file (you can create a small <code>other.html</code> for practice):
-      <a href="other.html">Open other.html (relative)</a>
-    </p>
-  </section>
+  <!-- Title Attribute -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5>Title Attribute</h5>
+      <a href="https://www.w3schools.com"
+         title="Go to W3Schools Website">
+        Hover over this link
+      </a>
+    </div>
+  </div>
 
-  <section id="mailto">
-    <h2>mailto and tel links</h2>
-    <p>
-      Email link (opens email client): <a href="mailto:yourname@example.com?subject=Internship%20Question">Email me</a>
-    </p>
-    <p>
-      Telephone (mobile devices will prompt a call): <a href="tel:+911234567890">Call: +91 1234567890</a>
-    </p>
-  </section>
+</div>
 
-  <section id="download">
-    <h2>Download attribute</h2>
-    <p>
-      If you put a file `sample.pdf` in the same folder, this link makes the browser download it:
-      <a href="sample.pdf" download="my-sample">Download sample.pdf</a>
-    </p>
-  </section>
-
-  <hr>
-  <p><small>Tips: use <code>rel="noopener noreferrer"</code> with <code>target="_blank"</code> for security. Use absolute URLs for external resources and relative URLs for files inside your repo.</small></p>
 </body>
 </html>

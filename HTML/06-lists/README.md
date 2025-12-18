@@ -6,16 +6,16 @@ Practice HTML list types:
 - Ordered lists (<ol>)
 - Description lists (<dl>)
 - Nested lists
-- Inline (horizontal) lists and basic styling
-- Accessibility tips for lists
 
-## Files
-- index.html
+## 📋 Quick Reference
 
-## Steps performed
-1. Created `index.html` with examples for ul, ol, dl, nested and inline lists.
-2. Tested in browser and inspected layout via DevTools.
-3. Verified accessibility practices (semantic markup).
+**Tags:**
+- `<ul>` - Unordered list
+- `<ol>` - Ordered list  
+- `<li>` - List item
+- `<dl>` - Description list
+- `<dt>` - Term
+- `<dd>` - Description
 
 ## Git commands
 ```bash

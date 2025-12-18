@@ -1,67 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Task 12 — Events</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Events Guide</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <h1>HTML Events — Task 12</h1>
+  <div class="container">
+    <h1> HTML Events</h1>
 
-    <section class="box">
-      <h2>1. Click events</h2>
-      <button id="btn-click">Click me</button>
-      <p id="click-output">No clicks yet.</p>
-    </section>
+    <!-- Mouse Events -->
+    <div class="box">
+      <h2> Mouse Events</h2>
+      <button class="btn" onclick="alert('Clicked!')">onclick</button>
+      <button class="btn" ondblclick="alert('Double Clicked!')">ondblclick</button>
+      <button class="btn" onmouseenter="showMsg('Mouse Enter')" onmouseleave="showMsg('Mouse Leave')">hover me</button>
+      <div id="mouse-output"></div>
+    </div>
 
-    <section class="box">
-      <h2>2. Double-click and mouseover</h2>
-      <div id="hover-box" style="padding:12px;border:1px solid #ccc;display:inline-block;">
-        Hover or double-click me
-      </div>
-      <p id="hover-output"></p>
-    </section>
+    <!-- Keyboard Events -->
+    <div class="box">
+      <h2> Keyboard Events</h2>
+      <input type="text" class="form-control" onkeydown="handleKey('keydown')" onkeyup="handleKey('keyup')" placeholder="Type something...">
+      <div id="key-output"></div>
+    </div>
 
-    <section class="box">
-      <h2>3. Keyboard events</h2>
-      <input id="input-key" placeholder="Type here and press keys" />
-      <p id="key-output">Last key: —</p>
-    </section>
-
-    <section class="box">
-      <h2>4. Form submit (preventDefault)</h2>
-      <form id="sample-form">
-        <label for="fname">Name</label>
-        <input id="fname" name="fname" required />
-        <button type="submit">Submit</button>
+    <!-- Form Events -->
+    <div class="box">
+      <h2> Form Events</h2>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" class="form-control mb-2" placeholder="Name" required>
+        <input type="email" class="form-control mb-2" placeholder="Email" onchange="alert('Changed!')" required>
+        <button type="submit" class="btn">Submit (onsubmit)</button>
       </form>
-      <p id="form-output"></p>
-    </section>
+    </div>
+    <!-- Clipboard Events -->
+    <div class="box">
+      <h2> Clipboard Events</h2>
+      <input type="text" class="form-control" oncopy="alert('Copied!')" oncut="alert('Cut!')" onpaste="alert('Pasted!')" value="Try copy/cut/paste">
+    </div>
 
-    <section class="box">
-      <h2>5. Event delegation & bubbling</h2>
-      <ul id="todo-list">
-        <li data-id="1">Buy milk <button class="del">Delete</button></li>
-        <li data-id="2">Read book <button class="del">Delete</button></li>
-        <li data-id="3">Learn JS <button class="del">Delete</button></li>
-      </ul>
-      <p id="todo-output">Use the delete buttons — event delegation handles them.</p>
-    </section>
+    <!-- Drag Events -->
+    <div class="box">
+      <h2> Drag Events</h2>
+      <div class="drag-box" draggable="true" ondragstart="handleDrag(event)">Drag Me!</div>
+      <div class="drop-zone" ondrop="handleDrop(event)" ondragover="allowDrop(event)">Drop Here</div>
+    </div>
 
-    <section class="box">
-      <h2>6. Touch event (mobile)</h2>
-      <div id="touch-area" style="inline-size:200px;block-size:120px;border:1px dashed #888;display:flex;align-items:center;justify-content:center;">
-        Touch here (or click)
+    <!-- Summary -->
+    <div class="box summary">
+      <h2> Event Categories</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="category"> Mouse: click, dblclick, hover</div></div>
+        <div class="col-md-4"><div class="category"> Keyboard: keydown, keyup, keypress</div></div>
+        <div class="col-md-4"><div class="category"> Form: submit, change, input</div></div>
+        <div class="col-md-4"><div class="category"> Clipboard: copy, cut, paste</div></div>
       </div>
-      <p id="touch-output"></p>
-    </section>
+    </div>
+  </div>
 
-    <hr />
-    <p><small>Open DevTools → Console to see event objects and propagation logs.</small></p>
-  </main>
-
-  <script src="app.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
