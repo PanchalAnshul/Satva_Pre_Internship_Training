@@ -8,10 +8,6 @@
 - Semantic elements give meaning to structure (header, nav, section, article).
 - Non-semantic elements (div, span) used for structure only.
 
-## Files
-- index.html — block/inline/void elements + DOCTYPE
-- semantic.html — semantic layout example
-
 ## Git Commands
 ```bash
 git checkout -b html-task-11-elements

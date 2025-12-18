@@ -1,92 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Task 11 — DOCTYPE & Elements</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .box { border: 1px solid #aaa; padding: 10px; border-radius: 6px; margin-block-end: 14px; }
-    .inline-demo span { background: yellow; padding: 4px; }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>DOCTYPE and HTML Elements</h1>
+  <div class="container">
+    <h1> DOCTYPE and HTML Elements</h1>
 
-  <div class="box">
-    <h2>1. DOCTYPE</h2>
-    <p>The DOCTYPE for HTML5 is:</p>
-    <code>&lt;!doctype html&gt;</code>
-    <p>It tells the browser to use **standards mode** instead of quirks mode.</p>
-  </div>
+    <!-- DOCTYPE Section -->
+    <div class="box">
+      <h2>1️⃣ DOCTYPE Declaration</h2>
+      <p>The DOCTYPE for HTML5 is:</p>
+      <div class="code-box">
+        &lt;!DOCTYPE html&gt;
+      </div>
+      <div class="info-card">
+        <strong>Why use DOCTYPE?</strong>
+        <ul>
+          <li> Tells browser to use <strong>standards mode</strong></li>
+          <li> Ensures consistent rendering across browsers</li>
+          <li> Prevents <strong>quirks mode</strong> (old browser behavior)</li>
+          <li> Required for valid HTML5</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="box">
-    <h2>2. Block-level elements</h2>
-    <p>Block elements start on a new line and take full width.</p>
-    <ul>
-      <li>&lt;div&gt;</li>
-      <li>&lt;p&gt;</li>
-      <li>&lt;h1&gt;–&lt;h6&gt;</li>
-      <li>&lt;section&gt;</li>
-      <li>&lt;article&gt;</li>
-    </ul>
+    <!-- Block-level Elements -->
+    <div class="box">
+      <h2>2️⃣ Block-level Elements</h2>
+      <p>Block elements start on a <strong>new line</strong> and take <strong>full width</strong>.</p>
+      
+      <div class="element-list">
+        <span class="badge-element">&lt;div&gt;</span>
+        <span class="badge-element">&lt;p&gt;</span>
+        <span class="badge-element">&lt;h1&gt;–&lt;h6&gt;</span>
+        <span class="badge-element">&lt;section&gt;</span>
+        <span class="badge-element">&lt;article&gt;</span>
+        <span class="badge-element">&lt;header&gt;</span>
+        <span class="badge-element">&lt;footer&gt;</span>
+        <span class="badge-element">&lt;main&gt;</span>
+        <span class="badge-element">&lt;ul&gt;</span>
+        <span class="badge-element">&lt;ol&gt;</span>
+      </div>
 
-    <p>Example:</p>
-    <div style="background:#eee; padding:10px;">I am a block element (DIV)</div>
-  </div>
+      <div class="demo-section">
+        <p><strong>Example:</strong></p>
+        <div class="block-demo">I am a BLOCK element (DIV) - I take full width!</div>
+        <div class="block-demo">I am another BLOCK element - I start on a new line!</div>
+      </div>
+    </div>
 
-  <div class="box inline-demo">
-    <h2>3. Inline elements</h2>
-    <p>Inline elements do not start on a new line.</p>
-    <ul>
-      <li>&lt;span&gt;</li>
-      <li>&lt;a&gt;</li>
-      <li>&lt;strong&gt;</li>
-      <li>&lt;em&gt;</li>
-    </ul>
+    <!-- Inline Elements -->
+    <div class="box">
+      <h2>3️⃣ Inline Elements</h2>
+      <p>Inline elements do <strong>NOT</strong> start on a new line. They only take the space they need.</p>
+      
+      <div class="element-list">
+        <span class="badge-element inline">&lt;span&gt;</span>
+        <span class="badge-element inline">&lt;a&gt;</span>
+        <span class="badge-element inline">&lt;strong&gt;</span>
+        <span class="badge-element inline">&lt;em&gt;</span>
+        <span class="badge-element inline">&lt;img&gt;</span>
+        <span class="badge-element inline">&lt;code&gt;</span>
+        <span class="badge-element inline">&lt;small&gt;</span>
+        <span class="badge-element inline">&lt;b&gt;</span>
+        <span class="badge-element inline">&lt;i&gt;</span>
+      </div>
 
-    <p>Example:</p>
-    <p>
-      This is <span>an inline SPAN</span> inside a sentence.
-    </p>
-  </div>
+      <div class="demo-section">
+        <p><strong>Example:</strong></p>
+        <p class="inline-demo">
+          This is <span class="highlight">an inline SPAN</span> and this is 
+          <strong class="highlight">a STRONG tag</strong> and here's 
+          <a href="#" class="highlight">a LINK</a> - all in the same line!
+        </p>
+      </div>
+    </div>
 
-  <div class="box">
-    <h2>4. Self-closing (void) elements</h2>
-    <p>These elements have no closing tag:</p>
-    <ul>
-      <li>&lt;br&gt;</li>
-      <li>&lt;hr&gt;</li>
-      <li>&lt;img&gt;</li>
-      <li>&lt;meta&gt;</li>
-      <li>&lt;input&gt;</li>
-    </ul>
+    <!-- Self-closing Elements -->
+    <div class="box">
+      <h2>4️⃣ Self-closing (Void) Elements</h2>
+      <p>These elements have <strong>NO closing tag</strong>. They are self-contained.</p>
+      
+      <div class="element-list">
+        <span class="badge-element void">&lt;br&gt;</span>
+        <span class="badge-element void">&lt;hr&gt;</span>
+        <span class="badge-element void">&lt;img&gt;</span>
+        <span class="badge-element void">&lt;input&gt;</span>
+        <span class="badge-element void">&lt;meta&gt;</span>
+        <span class="badge-element void">&lt;link&gt;</span>
+        <span class="badge-element void">&lt;area&gt;</span>
+        <span class="badge-element void">&lt;col&gt;</span>
+      </div>
 
-    <p>Example:</p>
-    Line 1<br>Line 2 (because &lt;br&gt; is used)
-  </div>
+      <div class="demo-section">
+        <p><strong>Examples:</strong></p>
+        <div class="void-demo">
+          Line 1<br>
+          Line 2 (used &lt;br&gt; to break line)
+          <hr>
+          Horizontal line above (used &lt;hr&gt;)
+        </div>
+      </div>
+    </div>
 
-  <div class="box">
-    <h2>5. Semantic vs Non-semantic elements</h2>
-    <p><strong>Semantic elements</strong> describe meaning:</p>
-    <ul>
-      <li>&lt;header&gt;</li>
-      <li>&lt;nav&gt;</li>
-      <li>&lt;main&gt;</li>
-      <li>&lt;section&gt;</li>
-      <li>&lt;footer&gt;</li>
-    </ul>
+    <!-- Semantic vs Non-semantic -->
+    <div class="box">
+      <h2>5️⃣ Semantic vs Non-semantic Elements</h2>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="semantic-card">
+            <h4> Semantic Elements</h4>
+            <p>Describe <strong>meaning</strong> and <strong>purpose</strong></p>
+            <div class="element-list">
+              <span class="badge-element semantic">&lt;header&gt;</span>
+              <span class="badge-element semantic">&lt;nav&gt;</span>
+              <span class="badge-element semantic">&lt;main&gt;</span>
+              <span class="badge-element semantic">&lt;section&gt;</span>
+              <span class="badge-element semantic">&lt;article&gt;</span>
+              <span class="badge-element semantic">&lt;aside&gt;</span>
+              <span class="badge-element semantic">&lt;footer&gt;</span>
+              <span class="badge-element semantic">&lt;figure&gt;</span>
+            </div>
+            <div class="benefits">
+              <strong>Benefits:</strong>
+              <ul>
+                <li>Better SEO</li>
+                <li>Accessibility</li>
+                <li>Code readability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <p><strong>Non-semantic elements</strong> do NOT describe meaning:</p>
-    <ul>
-      <li>&lt;div&gt;</li>
-      <li>&lt;span&gt;</li>
-    </ul>
+        <div class="col-md-6">
+          <div class="non-semantic-card">
+            <h4> Non-semantic Elements</h4>
+            <p>No specific <strong>meaning</strong> - just containers</p>
+            <div class="element-list">
+              <span class="badge-element non-semantic">&lt;div&gt;</span>
+              <span class="badge-element non-semantic">&lt;span&gt;</span>
+            </div>
+            <div class="benefits">
+              <strong>Use when:</strong>
+              <ul>
+                <li>No semantic meaning</li>
+                <li>Just for styling</li>
+                <li>Grouping elements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <p>
-      Open <a href="semantic.html">semantic.html</a> for examples.
-    </p>
+      <div class="demo-section mt-4">
+        <h4> Semantic HTML Example:</h4>
+        <div class="semantic-example">
+          <pre><code>&lt;header&gt;
+  &lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;section&gt;Content&lt;/section&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Comparison -->
+    <div class="box comparison-box">
+      <h2>6️⃣ Visual Comparison</h2>
+      
+      <div class="comparison">
+        <div class="compare-item">
+          <h4>Block Elements</h4>
+          <div class="visual-block">Block 1</div>
+          <div class="visual-block">Block 2</div>
+          <div class="visual-block">Block 3</div>
+          <p class="small">Each takes full width, starts on new line</p>
+        </div>
+
+        <div class="compare-item">
+          <h4>Inline Elements</h4>
+          <div>
+            <span class="visual-inline">Inline 1</span>
+            <span class="visual-inline">Inline 2</span>
+            <span class="visual-inline">Inline 3</span>
+          </div>
+          <p class="small">All on same line, only take needed space</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="box summary-box">
+      <h2> Quick Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <strong>DOCTYPE</strong>
+          <p>Declares HTML5, enables standards mode</p>
+        </div>
+        <div class="summary-item">
+          <strong>Block</strong>
+          <p>Full width, new line</p>
+        </div>
+        <div class="summary-item">
+          <strong>Inline</strong>
+          <p>Same line, minimal space</p>
+        </div>
+        <div class="summary-item">
+          <strong>Void</strong>
+          <p>No closing tag needed</p>
+        </div>
+        <div class="summary-item">
+          <strong>Semantic</strong>
+          <p>Has meaning (header, nav)</p>
+        </div>
+        <div class="summary-item">
+          <strong>Non-semantic</strong>
+          <p>No meaning (div, span)</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </body>

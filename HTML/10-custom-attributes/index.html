@@ -1,57 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Task 10 — data-* Deep Dive (Mini Product Demo)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Data Attributes - Complete Guide</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Products — data-* Attributes Demo</h1>
+  <div class="container">
+    <h1>Custom Data Attributes</h1>
 
-    <div class="controls">
-      <label for="filter">Filter by tag:</label>
-      <select id="filter">
-        <option value="all">All</option>
-        <option value="clothing">Clothing</option>
-        <option value="accessory">Accessory</option>
-        <option value="sale">Sale</option>
-      </select>
-      <button id="clear-cart">Clear Cart</button>
-      <div id="cart-summary">Cart: <span id="cart-count">0</span> items</div>
+    <!-- Concept 1: Basic Syntax -->
+    <div class="demo-box">
+      <h3 class="demo-title">1️⃣ Basic Syntax</h3>
+      <p>Store custom data directly in HTML elements using <code>data-*</code> attributes.</p>
+      
+      <div class="card-demo" data-info="This is stored in HTML!" id="basic-demo">
+        <p><strong>HTML:</strong> <code>&lt;div data-info="This is stored in HTML!"&gt;</code></p>
+        <button class="btn-demo" onclick="showBasic()">Read Data</button>
+        <div id="basic-output"></div>
+      </div>
     </div>
 
-    <section id="products" class="products">
-      <!-- Product cards with data-* attributes -->
-      <article class="card" data-id="p1" data-name="T-Shirt" data-price="249.00" data-discount="10" data-tags="clothing,sale">
-        <h3>T-Shirt</h3>
-        <p class="price">₹249</p>
-        <button class="btn details">Details</button>
-        <button class="btn add">Add to cart</button>
-      </article>
+    <!-- Concept 2: Multiple Data Attributes -->
+    <div class="demo-box">
+      <h3 class="demo-title">2️⃣ Multiple Data Attributes</h3>
+      <p>Store multiple pieces of information on a single element.</p>
+      
+      <div class="card-demo" 
+           data-user-id="101" 
+           data-user-name="John Doe" 
+           data-user-role="Admin" 
+           data-user-email="john@example.com"
+           id="multi-demo">
+        <p><strong>User Card</strong></p>
+        <button class="btn-demo" onclick="showMultiple()">Show All Data</button>
+        <div id="multi-output"></div>
+      </div>
+    </div>
 
-      <article class="card" data-id="p2" data-name="Cap" data-price="149.00" data-discount="0" data-tags="accessory">
-        <h3>Cap</h3>
-        <p class="price">₹149</p>
-        <button class="btn details">Details</button>
-        <button class="btn add">Add to cart</button>
-      </article>
+    <!-- Concept 3: Reading with JavaScript -->
+    <div class="demo-box">
+      <h3 class="demo-title">3️⃣ Reading Data (Two Methods)</h3>
+      
+      <div class="card-demo" data-product="Laptop" data-price="999" id="read-demo">
+        <p><strong>Method 1:</strong> <code>element.dataset.product</code> (Modern)</p>
+        <p><strong>Method 2:</strong> <code>element.getAttribute('data-product')</code> (Old)</p>
+        <button class="btn-demo" onclick="showReading()">Test Both Methods</button>
+        <div id="read-output"></div>
+      </div>
+    </div>
 
-      <article class="card" data-id="p3" data-name="Jeans" data-price="999.00" data-discount="15" data-tags="clothing">
-        <h3>Jeans</h3>
-        <p class="price">₹999</p>
-        <button class="btn details">Details</button>
-        <button class="btn add">Add to cart</button>
-      </article>
-    </section>
+    <!-- Concept 4: Writing/Updating Data -->
+    <div class="demo-box">
+      <h3 class="demo-title">4️⃣ Writing & Updating Data</h3>
+      
+      <div class="card-demo" data-count="0" id="write-demo">
+        <p>Current Count: <span id="count-display">0</span></p>
+        <button class="btn-demo" onclick="increment()">Increment</button>
+        <button class="btn-demo" onclick="reset()">Reset</button>
+        <div id="write-output"></div>
+      </div>
+    </div>
 
-    <aside id="detail" class="detail" aria-live="polite">
-      <h2>Product details</h2>
-      <div id="detail-content">Click a product's <em>Details</em> button to view metadata</div>
-    </aside>
-  </main>
+    <!-- Concept 5: Naming Convention -->
+    <div class="demo-box">
+      <h3 class="demo-title">5️⃣ Naming Convention (Hyphen to CamelCase)</h3>
+      
+      <div class="card-demo" 
+           data-first-name="Jane" 
+           data-last-name="Smith" 
+           data-phone-number="123-456-7890"
+           id="naming-demo">
+        <p><strong>HTML:</strong> <code>data-first-name</code> → <strong>JS:</strong> <code>dataset.firstName</code></p>
+        <button class="btn-demo" onclick="showNaming()">Show Conversion</button>
+        <div id="naming-output"></div>
+      </div>
+    </div>
+    <!-- Concept 7: Practical Use - Dynamic Actions -->
+    <div class="demo-box">
+      <h3 class="demo-title">6️⃣ Practical Example: Dynamic Button Actions</h3>
+      
+      <button class="btn-demo" data-action="save" data-message="Data saved!" onclick="performAction(this)">Save</button>
+      <button class="btn-demo" data-action="delete" data-message="Data deleted!" onclick="performAction(this)">Delete</button>
+      <button class="btn-demo" data-action="update" data-message="Data updated!" onclick="performAction(this)">Update</button>
+      <div id="action-output"></div>
+    </div>
 
-  <script src="app.js" defer></script>
+    <!-- Summary -->
+    <div class="demo-box summary-box">
+      <h3>📚 Quick Reference</h3>
+      <p><strong>HTML:</strong> <code>data-user-name="John"</code></p>
+      <p><strong>JS Read:</strong> <code>element.dataset.userName</code></p>
+      <p><strong>JS Write:</strong> <code>element.dataset.userName = "Jane"</code></p>
+      <p><strong>Rules:</strong> Use lowercase, hyphens in HTML → camelCase in JS</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

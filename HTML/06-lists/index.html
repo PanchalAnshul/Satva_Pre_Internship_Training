@@ -1,93 +1,346 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>HTML Task 06 — Lists</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; padding: 20px; max-inline-size: 900px; }
-    section { margin-block-end: 28px; border-inline-start: 4px solid #e3e3e3; padding: 12px 16px; border-radius:6px; }
-    h1,h2 { margin: 8px 0; }
-    code { background:#f4f4f4; padding:2px 6px; border-radius:4px; }
-    .example { margin-block-start: 10px; }
-    .inline-list { list-style:none; padding:0; display:flex; gap:10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists Guide</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-block-size: 100vh;
+            padding: 30px 0;
+        }
+
+        .main-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+            max-inline-size: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-block-end: 30px;
+            padding-block-end: 20px;
+            border-block-end: 3px solid #667eea;
+        }
+
+        .page-header h1 {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .list-box {
+            background: #f8f9fa;
+            border-inline-start: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #f0f4ff;
+            border-inline-start: 4px solid #667eea;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .code-tag {
+            background: #e7e7e7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        .example-output {
+            background: white;
+            border: 2px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-block-start: 10px;
+        }
+
+        .list-type-demo {
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-block-start: 20px;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-  <h1>HTML Lists — Task 06</h1>
 
-  <section id="unordered">
-    <h2>Unordered list (&lt;ul&gt;)</h2>
-    <p>Use for lists where order doesn't matter.</p>
-    <ul>
-      <li>Milk</li>
-      <li>Bread</li>
-      <li>Eggs</li>
-    </ul>
-  </section>
+    <div class="container">
+        <div class="main-container">
+            
+            <!-- Header -->
+            <div class="page-header">
+                <h1><i class="bi bi-list-ul"></i> HTML Lists</h1>
+                <p class="mb-0">Ordered, Unordered & Description Lists</p>
+            </div>
 
-  <section id="ordered">
-    <h2>Ordered list (&lt;ol&gt;)</h2>
-    <p>Use when sequence or priority matters.</p>
-    <ol>
-      <li>Install Node.js</li>
-      <li>Set up project</li>
-      <li>Run tests</li>
-    </ol>
-  </section>
+            <!-- 1. Unordered List -->
+            <h3 class="section-title">1. Unordered List (Bullets)</h3>
+            <div class="info-box">
+                <strong>Tags:</strong> <span class="code-tag">&lt;ul&gt;</span> <span class="code-tag">&lt;li&gt;</span> | 
+                <strong>Use:</strong> List items without specific order
+            </div>
+            
+            <div class="list-box">
+                <strong>Code:</strong>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                
+                <div class="example-output">
+                    <strong>Output:</strong>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
 
-  <section id="description">
-    <h2>Description list (&lt;dl&gt;)</h2>
-    <p>Best for term → definition pairs.</p>
-    <dl>
-      <dt>HTML</dt>
-      <dd>HyperText Markup Language — structure of web pages.</dd>
-      <dt>CSS</dt>
-      <dd>Cascading Style Sheets — presentation and layout.</dd>
-      <dt>JS</dt>
-      <dd>JavaScript — interactive behavior.</dd>
-    </dl>
-  </section>
+            <!-- List Style Types for UL -->
+            <div class="list-box">
+                <strong>List Style Types (CSS):</strong>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <p><strong>disc (default)</strong></p>
+                        <ul style="list-style-type: disc;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>circle</strong></p>
+                        <ul style="list-style-type: circle;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>square</strong></p>
+                        <ul style="list-style-type: square;">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-  <section id="nested">
-    <h2>Nested lists</h2>
-    <p>Combine &lt;ul&gt; or &lt;ol&gt; inside list items.</p>
-    <ul>
-      <li>Fruits
-        <ol>
-          <li>Apple</li>
-          <li>Banana</li>
-        </ol>
-      </li>
-      <li>Vegetables
-        <ul>
-          <li>Carrot</li>
-          <li>Spinach</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+            <!-- 2. Ordered List -->
+            <h3 class="section-title">2. Ordered List (Numbers)</h3>
+            <div class="info-box">
+                <strong>Tags:</strong> <span class="code-tag">&lt;ol&gt;</span> <span class="code-tag">&lt;li&gt;</span> | 
+                <strong>Use:</strong> List items in specific order
+            </div>
+            
+            <div class="list-box">
+                <strong>Code:</strong>
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt;Open VS Code&lt;/li&gt;
+  &lt;li&gt;Write HTML code&lt;/li&gt;
+  &lt;li&gt;Save file&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                
+                <div class="example-output">
+                    <strong>Output:</strong>
+                    <ol>
+                        <li>Open VS Code</li>
+                        <li>Write HTML code</li>
+                        <li>Save file</li>
+                    </ol>
+                </div>
+            </div>
 
-  <section id="inline">
-    <h2>Inline / horizontal list</h2>
-    <p>Useful for navs or tags.</p>
-    <ul class="inline-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </section>
+            <!-- Ordered List Types -->
+            <div class="list-box">
+                <strong>Type Attribute:</strong>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <p><strong>type="1" (default)</strong></p>
+                        <ol type="1">
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>type="A"</strong></p>
+                        <ol type="A">
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>type="a"</strong></p>
+                        <ol type="a">
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4">
+                        <p><strong>type="I"</strong></p>
+                        <ol type="I">
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>type="i"</strong></p>
+                        <ol type="i">
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>start="5"</strong></p>
+                        <ol start="5">
+                            <li>Fifth</li>
+                            <li>Sixth</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
-  <section id="accessibility">
-    <h2>Accessiblity tips</h2>
-    <ul>
-      <li>Use semantic lists for screen readers.</li>
-      <li>Use descriptive text in list items — not just links like “click here”.</li>
-      <li>For long lists, provide headings and grouping.</li>
-    </ul>
-  </section>
+            <!-- 3. Description List -->
+            <h3 class="section-title">3. Description List (Terms & Definitions)</h3>
+            <div class="info-box">
+                <strong>Tags:</strong> <span class="code-tag">&lt;dl&gt;</span> <span class="code-tag">&lt;dt&gt;</span> <span class="code-tag">&lt;dd&gt;</span> | 
+                <strong>Use:</strong> Define terms and descriptions
+            </div>
+            
+            <div class="list-box">
+                <strong>Code:</strong>
+                <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                
+                <div class="example-output">
+                    <strong>Output:</strong>
+                    <dl>
+                        <dt><strong>HTML</strong></dt>
+                        <dd>HyperText Markup Language</dd>
+                        <dt><strong>CSS</strong></dt>
+                        <dd>Cascading Style Sheets</dd>
+                        <dt><strong>JavaScript</strong></dt>
+                        <dd>Programming language for web interactivity</dd>
+                    </dl>
+                </div>
+            </div>
 
-  <hr>
-  <p><small>Try editing list styles in DevTools (list-style-type, margin, padding) to see how layout changes.</small></p>
+            <!-- 4. Nested Lists -->
+            <h3 class="section-title">4. Nested Lists</h3>
+            <div class="info-box">
+                Lists inside lists - Perfect for hierarchical data
+            </div>
+            
+            <div class="list-box">
+                <strong>Code:</strong>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                
+                <div class="example-output">
+                    <strong>Output:</strong>
+                    <ul>
+                        <li>Frontend
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </li>
+                        <li>Backend
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Python</li>
+                            </ul>
+                        </li>
+                        <li>Database
+                            <ul>
+                                <li>MongoDB</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quick Reference -->
+            <h3 class="section-title">📋 Quick Reference</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <strong>List Tags:</strong><br>
+                        • <span class="code-tag">&lt;ul&gt;</span> - Unordered list<br>
+                        • <span class="code-tag">&lt;ol&gt;</span> - Ordered list<br>
+                        • <span class="code-tag">&lt;li&gt;</span> - List item<br>
+                        • <span class="code-tag">&lt;dl&gt;</span> - Description list<br>
+                        • <span class="code-tag">&lt;dt&gt;</span> - Term<br>
+                        • <span class="code-tag">&lt;dd&gt;</span> - Description
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <strong>Attributes:</strong><br>
+                        • <span class="code-tag">type</span> - List marker style<br>
+                        • <span class="code-tag">start</span> - Starting number<br>
+                        • <span class="code-tag">reversed</span> - Reverse order<br><br>
+                        <strong>CSS:</strong><br>
+                        • <span class="code-tag">list-style-type</span><br>
+                        • <span class="code-tag">list-style-position</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Created by Anshul Panchal</strong></p>
+            <!-- <p class="mb-0">Pre-Internship Training - Satva Solutions</p> -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

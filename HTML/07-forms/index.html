@@ -1,114 +1,410 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML Task 07 — Forms</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      max-inline-size: 900px;
-    }
-    .form-group {
-      margin-block-end: 16px;
-    }
-    label {
-      display: block;
-      margin-block-end: 6px;
-      font-weight: bold;
-    }
-    input, select, textarea {
-      inline-size: 100%;
-      padding: 8px;
-      border: 1px solid #bbb;
-      border-radius: 4px;
-    }
-    fieldset {
-      border: 1px solid #ccc;
-      padding: 12px;
-      border-radius: 6px;
-      margin-block-end: 16px;
-    }
-    legend {
-      padding: 0 6px;
-      font-weight: bold;
-    }
-    button {
-      padding: 10px 18px;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Guide</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-block-size: 100vh;
+        }
+
+        .container {
+            max-inline-size: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-block-end: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-block-end: 30px;
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-inline-start: 4px solid #667eea;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-block-end: 15px;
+            font-size: 1.3rem;
+        }
+
+        .info {
+            background: #e7f3ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .form-demo {
+            background: white;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-block-start: 15px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        select {
+            inline-size: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-inline-end: 5px;
+        }
+
+        button, input[type="submit"] {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-block-start: 10px;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background: #5568d3;
+        }
+
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .inline-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer {
+            text-align: center;
+            margin-block-start: 30px;
+            padding-block-start: 20px;
+            border-block-start: 2px solid #667eea;
+            color: #666;
+        }
+
+        fieldset {
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        legend {
+            color: #667eea;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>HTML Forms — Task 07</h1>
 
-  <form action="#" method="post">
+    <div class="container">
+        <h1>📝 HTML Forms</h1>
+        <p class="subtitle">All Form Elements & Input Types</p>
 
-    <div class="form-group">
-      <label for="name">Full Name *</label>
-      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        <!-- 1. Basic Form Structure -->
+        <div class="section">
+            <h2>1. Basic Form Structure</h2>
+            <div class="info">
+                <strong>Tags:</strong> &lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;button&gt;
+            </div>
+            
+            <div class="code">&lt;form action="/submit" method="POST"&gt;
+  &lt;label&gt;Name: &lt;input type="text" name="username"&gt;&lt;/label&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</div>
+
+            <div class="form-demo">
+                <form>
+                    <label>Name:
+                        <input type="text" name="username" placeholder="Enter your name">
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 2. Text Input Types -->
+        <div class="section">
+            <h2>2. Text Input Types</h2>
+            <div class="form-demo">
+                <label>Text: <input type="text" placeholder="Normal text"></label>
+                <label>Email: <input type="email" placeholder="email@example.com"></label>
+                <label>Password: <input type="password" placeholder="Password"></label>
+                <label>Number: <input type="number" placeholder="123"></label>
+                <label>Tel: <input type="tel" placeholder="123-456-7890"></label>
+                <label>URL: <input type="url" placeholder="https://example.com"></label>
+                <label>Date: <input type="date"></label>
+                <label>Color: <input type="color"></label>
+            </div>
+        </div>
+
+        <!-- 3. Radio Buttons -->
+        <div class="section">
+            <h2>3. Radio Buttons (Single Choice)</h2>
+            <div class="info">Use same <strong>name</strong> attribute for grouping</div>
+            
+            <div class="code">&lt;input type="radio" name="gender" value="male"&gt; Male
+&lt;input type="radio" name="gender" value="female"&gt; Female</div>
+
+            <div class="form-demo">
+                <label>Gender:</label>
+                <div class="inline-group">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Checkboxes -->
+        <div class="section">
+            <h2>4. Checkboxes (Multiple Choice)</h2>
+            
+            <div class="code">&lt;input type="checkbox" name="skills" value="html"&gt; HTML
+&lt;input type="checkbox" name="skills" value="css"&gt; CSS</div>
+
+            <div class="form-demo">
+                <label>Skills:</label>
+                <label><input type="checkbox" name="skills" value="html"> HTML</label>
+                <label><input type="checkbox" name="skills" value="css"> CSS</label>
+                <label><input type="checkbox" name="skills" value="js"> JavaScript</label>
+                <label><input type="checkbox" name="skills" value="react"> React</label>
+            </div>
+        </div>
+
+        <!-- 5. Select Dropdown -->
+        <div class="section">
+            <h2>5. Select Dropdown</h2>
+            
+            <div class="code">&lt;select name="country"&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+&lt;/select&gt;</div>
+
+            <div class="form-demo">
+                <label>Country:
+                    <select name="country">
+                        <option value="">-- Select Country --</option>
+                        <option value="in">India</option>
+                        <option value="us">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="ca">Canada</option>
+                    </select>
+                </label>
+
+                <label>Course: (Multiple)
+                    <select name="courses" multiple size="4">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                        <option value="react">React</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <!-- 6. Textarea -->
+        <div class="section">
+            <h2>6. Textarea (Multi-line Text)</h2>
+            
+            <div class="code">&lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;</div>
+
+            <div class="form-demo">
+                <label>Message:
+                    <textarea name="message" rows="4" placeholder="Enter your message..."></textarea>
+                </label>
+            </div>
+        </div>
+
+        <!-- 7. Fieldset & Legend -->
+        <div class="section">
+            <h2>7. Fieldset & Legend (Grouping)</h2>
+            
+            <div class="code">&lt;fieldset&gt;
+  &lt;legend&gt;Personal Info&lt;/legend&gt;
+  &lt;input type="text" name="name"&gt;
+&lt;/fieldset&gt;</div>
+
+            <div class="form-demo">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>Name: <input type="text" name="name"></label>
+                    <label>Email: <input type="email" name="email"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Address</legend>
+                    <label>City: <input type="text" name="city"></label>
+                    <label>Zip: <input type="text" name="zip"></label>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- 8. Form Attributes -->
+        <div class="section">
+            <h2>8. Important Attributes</h2>
+            
+            <div class="form-demo">
+                <label>Required: <input type="text" required placeholder="This field is required"></label>
+                
+                <label>Readonly: <input type="text" value="Cannot edit" readonly></label>
+                
+                <label>Disabled: <input type="text" value="Disabled field" disabled></label>
+                
+                <label>Maxlength: <input type="text" maxlength="10" placeholder="Max 10 characters"></label>
+                
+                <label>Pattern: <input type="text" pattern="[A-Za-z]{3,}" placeholder="Min 3 letters" title="Minimum 3 letters"></label>
+                
+                <!-- <label>Autofocus: <input type="text" placeholder="Auto focused"></label> -->
+            </div>
+        </div>
+
+        <!-- 9. Button Types -->
+        <div class="section">
+            <h2>9. Button Types</h2>
+            
+            <div class="form-demo">
+                <button type="submit">Submit Button</button>
+                <button type="reset">Reset Button</button>
+                <button type="button">Normal Button</button>
+                <input type="submit" value="Submit Input">
+                <input type="reset" value="Reset Input">
+            </div>
+        </div>
+
+        <!-- 10. Complete Registration Form -->
+        <div class="section">
+            <h2>10. Complete Registration Form</h2>
+            
+            <div class="form-demo">
+                <form>
+                    <fieldset>
+                        <legend>User Registration</legend>
+                        
+                        <label>Full Name: <input type="text" name="fullname" required></label>
+                        
+                        <label>Email: <input type="email" name="email" required></label>
+                        
+                        <label>Password: <input type="password" name="password" required minlength="6"></label>
+                        
+                        <label>Date of Birth: <input type="date" name="dob"></label>
+                        
+                        <label>Gender:</label>
+                        <div class="inline-group">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                        </div>
+                        
+                        <label>Country:
+                            <select name="country" required>
+                                <option value="">Select</option>
+                                <option value="in">India</option>
+                                <option value="us">USA</option>
+                            </select>
+                        </label>
+                        
+                        <label>Skills:</label>
+                        <label><input type="checkbox" name="html"> HTML</label>
+                        <label><input type="checkbox" name="css"> CSS</label>
+                        <label><input type="checkbox" name="js"> JavaScript</label>
+                        
+                        <label>Bio:
+                            <textarea name="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+                        </label>
+                        
+                        <label><input type="checkbox" required> I agree to terms and conditions</label>
+                        
+                        <div>
+                            <button type="submit">Register</button>
+                            <button type="reset">Clear Form</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="section">
+            <h2>📋 Quick Reference</h2>
+            <div class="info">
+                <strong>Form Tags:</strong><br>
+                • &lt;form&gt; - Form container<br>
+                • &lt;input&gt; - Input field<br>
+                • &lt;label&gt; - Field label<br>
+                • &lt;textarea&gt; - Multi-line text<br>
+                • &lt;select&gt; - Dropdown<br>
+                • &lt;option&gt; - Dropdown option<br>
+                • &lt;button&gt; - Button<br>
+                • &lt;fieldset&gt; - Group fields<br>
+                • &lt;legend&gt; - Fieldset title<br><br>
+
+                <strong>Input Types:</strong> text, email, password, number, date, tel, url, color, radio, checkbox, file, submit, reset, button<br><br>
+
+                <strong>Attributes:</strong> name, value, placeholder, required, readonly, disabled, maxlength, pattern, autofocus
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Created by Anshul Panchal</strong></p>
+            <!-- <p>Pre-Internship Training - Satva Solutions</p> -->
+        </div>
     </div>
 
-    <div class="form-group">
-      <label for="email">Email Address *</label>
-      <input type="email" id="email" name="email" required placeholder="example@mail.com">
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password *</label>
-      <input type="password" id="password" name="password" minlength="6" required placeholder="Min 6 characters">
-    </div>
-
-    <fieldset>
-      <legend>Gender</legend>
-      <label><input type="radio" name="gender" value="male" required> Male</label>
-      <label><input type="radio" name="gender" value="female"> Female</label>
-      <label><input type="radio" name="gender" value="other"> Other</label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Skills (Checkboxes)</legend>
-      <label><input type="checkbox" name="skills" value="html"> HTML</label>
-      <label><input type="checkbox" name="skills" value="css"> CSS</label>
-      <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
-    </fieldset>
-
-    <div class="form-group">
-      <label for="course">Select Course</label>
-      <select id="course" name="course" required>
-        <option value="">-- Choose an option --</option>
-        <option value="frontend">Frontend Development</option>
-        <option value="backend">Backend Development</option>
-        <option value="fullstack">Fullstack Development</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="bio">Short Bio</label>
-      <textarea id="bio" name="bio" rows="4" placeholder="Write about yourself"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="resume">Upload Resume (PDF only)</label>
-      <input type="file" id="resume" accept="application/pdf">
-    </div>
-
-    <div class="form-group">
-      <label for="age">Age (18–60)</label>
-      <input type="number" id="age" name="age" min="18" max="60">
-    </div>
-
-    <button type="submit">Submit Form</button>
-
-  </form>
 </body>
 </html>
