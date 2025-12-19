@@ -1,28 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Intro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is CSS?</title>
+  
+  <!-- External CSS -->
+  <link id="stylesheet" rel="stylesheet" href="styles.css">
+  
+  <!-- Internal CSS -->
+  <style>
+    .internal-example {
+      background: #e3f2fd;
+      padding: 20px;
+      border-inline-start: 5px solid #2196f3;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .internal-example h3 {
+      color: #1976d2;
+      margin-block-start: 0;
+    }
+    
+    .css-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .css-type-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      border: 2px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .css-type-card h3 {
+      margin-block-start: 0;
+      font-size: 1.3rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>What is CSS?</h1>
-  <p>CSS (Cascading Style Sheets) separates presentation (look) from structure (HTML).</p>
+  <div class="container">
+    <header>
+      <h1>🎨 What is CSS?</h1>
+      <p class="subtitle">CSS is the language we use to style a Web page</p>
+    </header>
 
-  <h2>Ways to use CSS:</h2>
-  <ul>
-    <li>Inline: <code>&lt;h3 style="color:blue"&gt;Hello&lt;/h3&gt;</code></li>
-    <li>Internal: a &lt;style&gt; block in the &lt;head&gt;</li>
-    <li>External: link a separate <code>.css</code> file</li>
-  </ul>
+    <section class="intro-box">
+      <h2>CSS Stands For:</h2>
+      <ul>
+        <li><strong>C</strong>ascading</li>
+        <li><strong>S</strong>tyle</li>
+        <li><strong>S</strong>heets</li>
+      </ul>
+    </section>
 
-  <h3 style="color:blue">Inline example</h3>
+    <section class="info-box">
+      <h2>What Does CSS Do?</h2>
+      <ul>
+        <li>✅ Describes how HTML elements are displayed</li>
+        <li>✅ Controls layout of multiple web pages at once</li>
+        <li>✅ Saves a lot of work</li>
+        <li>✅ External stylesheets stored in .css files</li>
+      </ul>
+    </section>
 
-  <style>
-    /* internal example */
-    p { color: #333; font-family: Arial, sans-serif; }
-    .note { background:#f0f8ff; padding:8px; border-inline-start:4px solid #6ca0ff; }
-  </style>
 
-  <p class="note">This is styled by an internal stylesheet.</p>
+      <!-- Comparison Table -->
+      <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-inline-start: 5px solid #ffc107; margin-block-start: 30px;">
+        <h3 style="color: #856404; margin-block-start: 0;">📊 Types of CSS</h3>
+        <ul style="line-height: 2;">
+          <li><strong>Inline CSS:</strong> Quick single-element styling (not recommended for large projects)</li>
+          <li><strong>Internal CSS:</strong> Single page styling or testing</li>
+          <li><strong>External CSS:</strong> ⭐ Best for entire websites (recommended!)</li>
+        </ul>
+      </div>
+<br>
+    <section class="why-box">
+      <h2>Why Use CSS?</h2>
+      <p>CSS is used to define styles for your web pages, including:</p>
+      <div class="features">
+        <div class="feature">🎨 Design</div>
+        <div class="feature">📐 Layout</div>
+        <div class="feature">📱 Responsive</div>
+        <div class="feature">🖥️ Screen Sizes</div>
+      </div>
+    </section>
+
+    <section class="example-box">
+      <h2>📝 CSS Example</h2>
+      <pre><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}</code></pre>
+    </section>
 </body>
 </html>

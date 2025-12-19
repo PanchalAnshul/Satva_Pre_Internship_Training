@@ -1,26 +1,179 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Syntax - External CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Syntax</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>CSS Selectors & Syntax</h1>
-  <p class="lead">Selectors: element, class, id, descendant, attribute, pseudo.</p>
-
   <div class="container">
-    <div class="card">
-      <h3>Card title</h3>
-      <p>Example card styled by external CSS file.</p>
-    </div>
+    <h1>📝 CSS Syntax</h1>
 
-    <div class="card">
-      <div class="alert alert-success">Success alert</div>
-      <div class="alert alert-error">Error alert</div>
-    </div>
+    <!-- Main Syntax Diagram -->
+    <section class="syntax-box">
+      <h2>🎯 CSS Rule Structure</h2>
+      <div class="syntax-diagram">
+        <div class="diagram-part">
+          <span class="selector-part">p</span>
+          <span class="brace">{</span>
+        </div>
+        <div class="declarations">
+          <div class="declaration">
+            <span class="property">color</span><span class="colon">:</span>
+            <span class="value">red</span><span class="semicolon">;</span>
+          </div>
+          <div class="declaration">
+            <span class="property">text-align</span><span class="colon">:</span>
+            <span class="value">center</span><span class="semicolon">;</span>
+          </div>
+        </div>
+        <div class="diagram-part">
+          <span class="brace">}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components Breakdown -->
+    <section class="components-box">
+      <h2>🔍 CSS Rule Components</h2>
+      <div class="component-grid">
+        <div class="component">
+          <h3>1️⃣ Selector</h3>
+          <div class="example-part selector">p</div>
+          <p>Points to the HTML element you want to style</p>
+        </div>
+
+        <div class="component">
+          <h3>2️⃣ Property</h3>
+          <div class="example-part property">color</div>
+          <p>What you want to change (color, size, etc.)</p>
+        </div>
+
+        <div class="component">
+          <h3>3️⃣ Value</h3>
+          <div class="example-part value">red</div>
+          <p>The setting for the property</p>
+        </div>
+
+        <div class="component">
+          <h3>4️⃣ Declaration</h3>
+          <div class="example-part declaration-full">color: red;</div>
+          <p>Property + Value = One declaration</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Example -->
+    <section class="example-box">
+      <h2>📖 Example Explained</h2>
+      <div class="code-example">
+        <pre><code>p {
+  color: red;
+  text-align: center;
+}</code></pre>
+      </div>
+
+      <div class="explanation-cards">
+        <div class="exp-card">
+          <strong>Selector:</strong> <code class="inline-code">p</code>
+          <p>Targets all &lt;p&gt; elements</p>
+        </div>
+        <div class="exp-card">
+          <strong>Property:</strong> <code class="inline-code">color</code>
+          <p>The aspect to style</p>
+        </div>
+        <div class="exp-card">
+          <strong>Value:</strong> <code class="inline-code">red</code>
+          <p>Setting for the property</p>
+        </div>
+        <div class="exp-card">
+          <strong>Declaration:</strong> <code class="inline-code">color: red;</code>
+          <p>Complete style instruction</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Demo -->
+    <section class="demo-box">
+      <h2>🎨 Live Demo</h2>
+      <p>See the CSS rule in action:</p>
+      
+      <div class="demo-code">
+        <pre><code>p {
+  color: red;
+  text-align: center;
+}</code></pre>
+      </div>
+
+      <div class="demo-result">
+        <h3>Result:</h3>
+        <p class="styled-demo">This paragraph is styled with CSS! It has red color and center alignment.</p>
+      </div>
+    </section>
+
+    <!-- Syntax Rules -->
+    <section class="rules-box">
+      <h2>📋 Syntax Rules</h2>
+      <ul class="rules-list">
+        <li>✅ <strong>Selector</strong> points to HTML element</li>
+        <li>✅ <strong>Curly braces { }</strong> surround declarations</li>
+        <li>✅ <strong>Colon :</strong> separates property and value</li>
+        <li>✅ <strong>Semicolon ;</strong> ends each declaration</li>
+        <li>✅ <strong>Multiple declarations</strong> separated by semicolons</li>
+      </ul>
+    </section>
+
+    <!-- Visual Summary -->
+    <section class="summary-box">
+      <h2>📚 Quick Summary</h2>
+      <div class="summary-visual">
+        <div class="sum-row">
+          <span class="sum-label">Selector</span>
+          <span class="sum-arrow">→</span>
+          <span class="sum-desc">Which element to style</span>
+        </div>
+        <div class="sum-row">
+          <span class="sum-label">Property</span>
+          <span class="sum-arrow">→</span>
+          <span class="sum-desc">What to change</span>
+        </div>
+        <div class="sum-row">
+          <span class="sum-label">Value</span>
+          <span class="sum-arrow">→</span>
+          <span class="sum-desc">How to change it</span>
+        </div>
+        <div class="sum-row">
+          <span class="sum-label">Declaration</span>
+          <span class="sum-arrow">→</span>
+          <span class="sum-desc">Property + Value</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Example -->
+    <section class="practice-box">
+      <h2>💪 More Examples</h2>
+      
+      <div class="practice-example">
+        <pre><code>h1 {
+  font-size: 24px;
+  color: blue;
+  font-weight: bold;
+}</code></pre>
+        <h1 class="practice-h1">This is a styled heading!</h1>
+      </div>
+
+      <div class="practice-example">
+        <pre><code>div {
+  background: lightgreen;
+  padding: 20px;
+  border-radius: 10px;
+}</code></pre>
+        <div class="practice-div">This is a styled div!</div>
+      </div>
+    </section>
+
   </div>
-
-  <p id="specific">This uses an ID selector (#specific) — try adding rules in styles.css</p>
 </body>
 </html>

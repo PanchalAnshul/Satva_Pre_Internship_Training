@@ -1,35 +1,82 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Examples</title>
-  <style>
-    /* small self-contained examples */
-    .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
-    .box { flex:1 1 200px; padding:12px; border-radius:6px; border:1px solid #ddd; }
-    .hero { max-inline-size:900px; margin: 18px auto; text-align:center; }
-    img.responsive { max-inline-size:100%; block-size:auto; border-radius:6px; }
-    nav ul { list-style:none; padding:0; display:flex; gap:10px; }
-    nav a { text-decoration:none; padding:6px 10px; border-radius:4px; background:#f5f5f5; color:#333; }
-    @media (max-inline-size:600px) { .row{flex-direction:column;} }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Properties Examples</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="hero">
-    <h1>Responsive example</h1>
-    <img class="responsive" src="https://via.placeholder.com/900x300.png?text=Hero+Image" alt="hero">
-  </div>
+  <div class="container">
+    <h1>CSS Properties Examples</h1>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li><li><a href="#">Docs</a></li><li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Color & Background -->
+    <div class="box color-box">
+      <h2>Color & Background</h2>
+      <p>color, background-color, background</p>
+    </div>
 
-  <div class="row">
-    <div class="box">Box 1 — try resizing browser</div>
-    <div class="box">Box 2 — flex auto-wrapping</div>
-    <div class="box">Box 3</div>
+    <!-- Text Properties -->
+    <div class="box text-box">
+      <h2>Text Properties</h2>
+      <p class="text-demo">text-align, font-size, font-weight, text-decoration</p>
+    </div>
+
+    <!-- Font Properties -->
+    <div class="box font-box">
+      <h2>Font Properties</h2>
+      <p class="font-demo">font-family, font-style</p>
+    </div>
+
+    <!-- Box Model -->
+    <div class="box boxmodel-box">
+      <h2>Box Model</h2>
+      <div class="box-demo">padding, margin, border</div>
+    </div>
+
+    <!-- Width & Height -->
+    <div class="box size-box">
+      <h2>Width & Height</h2>
+      <div class="size-demo">width, height, max-width</div>
+    </div>
+
+    <!-- Border & Radius -->
+    <div class="box border-box">
+      <h2>Border & Radius</h2>
+      <div class="border-demo">border, border-radius</div>
+    </div>
+
+    <!-- Display & Position -->
+    <div class="box display-box">
+      <h2>Display</h2>
+      <span class="inline-demo">inline</span>
+      <span class="inline-demo">inline</span>
+      <div class="block-demo">block</div>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="box flex-box">
+      <h2>Flexbox</h2>
+      <div class="flex-demo">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div> 
+
+    <!-- Shadow & Opacity -->
+    <div class="box shadow-box">
+      <h2>Shadow & Opacity</h2>
+      <div class="shadow-demo">box-shadow</div>
+      <div class="opacity-demo">opacity: 0.5</div>
+    </div>
+
+    <!-- Transform -->
+    <div class="box transform-box">
+      <h2>Transform</h2>
+      <div class="transform-demo">Hover me!</div>
+    </div>
+
   </div>
 </body>
 </html>
