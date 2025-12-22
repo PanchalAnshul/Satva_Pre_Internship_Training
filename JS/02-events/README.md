@@ -9,10 +9,6 @@
 - Updating DOM with JS (`innerText`)
 - Logging values using console
 
-## 📁 Files
-- index.html — contains UI elements
-- script.js — contains event handling logic
-
 ## 🧪 What This Task Demonstrates
 - Clicking a button updates the page
 - Typing inside input shows real-time text

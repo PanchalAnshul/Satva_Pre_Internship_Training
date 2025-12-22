@@ -5,9 +5,6 @@ Understand and use all JS operators:
 - Arithmetic
 - Assignment
 - Comparison
-- Logical
-- Ternary
-- String operators
 
 ---
 
@@ -19,14 +16,6 @@ Understand and use all JS operators:
 5. Ternary Operator  
 6. String Concatenation Operator (`+`)
 
----
-
-## 🧪 How to Run
-1. Open `index.html` in your browser  
-2. Open **Console** (F12 → Console tab)  
-3. Check the printed operator results
-
----
 
 ## ✔ Output Includes:
 - All operator examples printed clearly  
