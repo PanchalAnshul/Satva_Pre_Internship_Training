@@ -1,9 +1,3 @@
-
-// ---
-
-// # ✅ **Main.java (FULL FILE — Copy & Paste Exactly as Below)**
-
-// ```java
 // ----------- ABSTRACTION ----------- //
 abstract class Employee {
     // Abstract method (must be implemented by child class)
