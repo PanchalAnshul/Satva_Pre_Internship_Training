@@ -1,50 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Task 01 — Introduction to JavaScript</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; max-inline-size: 900px; margin: 28px auto; padding: 0 16px; }
-    header { margin-block-end: 18px; }
-    .box { border: 1px solid #e0e0e0; padding: 14px; border-radius: 8px; background:#fff; box-shadow: 0 6px 14px rgba(0,0,0,0.03); }
-    button { margin-inline-end:8px; padding:8px 12px; border-radius:6px; border:0; cursor:pointer; background:#007bff; color:#fff; }
-    #output { margin-block-start:12px; padding:10px; border:1px dashed #ddd; border-radius:6px; background:#fafafa; white-space:pre-wrap; }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>JS Task 01 — Introduction</h1>
-    <p class="lead">Small page to demonstrate basic JavaScript usage in browser.</p>
-  </header>
+  <div class="container">
+    <!-- Intro Section -->
+    <header class="intro-section">
+      <h1> JavaScript Introduction</h1>
+      <p class="lead">Learn JavaScript basics with interactive examples</p>
+      
+      <div class="info-cards">
+        <div class="info-card">
+          <h3>What is JavaScript?</h3>
+          <p>Programming language that makes web pages interactive</p>
+        </div>
+        <div class="info-card">
+          <h3>Where it runs?</h3>
+          <p>In the browser (client-side) and server (Node.js)</p>
+        </div>
+        <div class="info-card">
+          <h3>What can it do?</h3>
+          <p>Manipulate HTML, handle events, make calculations</p>
+        </div>
+      </div>
+    </header>
 
-  <section class="box">
-    <h2>Console & Alerts</h2>
-    <p>Open your browser DevTools → Console to see messages from <code>console.log</code>.</p>
-    <button id="btn-alert">Show alert()</button>
-    <button id="btn-prompt">Show prompt()</button>
-    <button id="btn-console">Console message</button>
-  </section>
+    <!-- Console & Alerts -->
+    <section class="box">
+      <h2> Console & Alerts</h2>
+      <p>Open your browser DevTools → Console (F12) to see messages from <code>console.log()</code></p>
+      
+      <div class="button-group">
+        <button class="btn-custom" id="btn-alert">Show alert()</button>
+        <button class="btn-custom" id="btn-prompt">Show prompt()</button>
+        <button class="btn-custom" id="btn-console">Console message</button>
+      </div>
+      
+      <div class="info-box">
+        <strong> What happens?</strong>
+        <ul>
+          <li><code>alert()</code> - Shows popup message</li>
+          <li><code>prompt()</code> - Asks for user input</li>
+          <li><code>console.log()</code> - Prints to console</li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="box" style="margin-block-start:12px;">
-    <h2>DOM Interaction</h2>
-    <label for="name">Enter your name:</label>
-    <input id="name" type="text" placeholder="Type name" />
-    <button id="btn-greet">Greet</button>
+    <!-- DOM Interaction -->
+    <section class="box">
+      <h2>DOM Interaction</h2>
+      <p>JavaScript can read and change HTML content dynamically</p>
+      
+      <div class="input-group">
+        <label for="name">Enter your name:</label>
+        <input id="name" type="text" class="form-control" placeholder="Type your name">
+        <button class="btn-custom" id="btn-greet">Greet Me!</button>
+      </div>
 
-    <div id="output" aria-live="polite">Greeting output will appear here.</div>
-  </section>
+      <div id="output" class="output-box">
+        Greeting will appear here after you enter your name...
+      </div>
+      
+      <div class="info-box">
+        <strong> How it works:</strong>
+        <p>JavaScript gets the input value and displays it in the output box</p>
+      </div>
+    </section>
 
-  <section class="box" style="margin-block-start:12px;">
-    <h2>Quick Examples</h2>
-    <ol>
-      <li>Show current date/time</li>
-      <li>Calculate 2 + 3 and show result in console</li>
-    </ol>
-    <button id="btn-date">Show Date/Time</button>
-  </section>
+    <!-- Quick Examples -->
+    <section class="box">
+      <h2> Quick Examples</h2>
+      
+      <div class="example-item">
+        <h4> Current Date & Time</h4>
+        <button class="btn-custom" id="btn-date">Show Date/Time</button>
+        <div id="date-output" class="output-box">Click button to see current date/time</div>
+      </div>
 
-  <!-- External script with defer so DOM is ready -->
-  <script src="script.js" defer></script>
+      <div class="example-item">
+        <h4> Simple Calculation</h4>
+        <button class="btn-custom" id="btn-calc">Calculate 2 + 3</button>
+        <div id="calc-output" class="output-box">Result will appear here</div>
+      </div>
+
+      <div class="example-item">
+        <h4> Random Number</h4>
+        <button class="btn-custom" id="btn-random">Generate Random Number</button>
+        <div id="random-output" class="output-box">Random number (1-100) will appear here</div>
+      </div>
+    </section>
+
+    <!-- How JavaScript Works -->
+    <section class="box how-it-works">
+      <h2>🔧 How JavaScript Works</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="work-card">
+            <h3>1. HTML</h3>
+            <p>Structure & Content</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-card">
+            <h3>2. CSS</h3>
+            <p>Styling & Layout</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-card">
+            <h3>3. JavaScript</h3>
+            <p>Behavior & Interactivity</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="box summary-box">
+      <h2> Summary</h2>
+      <ul>
+        <li> JavaScript makes web pages interactive</li>
+        <li> Can manipulate HTML elements (DOM)</li>
+        <li> Can respond to user actions (events)</li>
+        <li> Can perform calculations and logic</li>
+        <li> Runs in the browser console</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

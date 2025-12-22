@@ -1,0 +1,61 @@
+:root {
+    --primary: #6366f1;
+    --bg: #6c93ce;
+    --card: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    padding: 50px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.intro-section { text-align: center; margin-block-end: 30px; }
+
+.box {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-block-end: 25px;
+}
+
+.btn-custom {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-custom:hover { background: #4f46e5; transform: translateY(-2px); }
+
+.output-box {
+    margin-block-start: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border-inline-start: 5px solid #cbd5e1;
+}
+
+/* Mouse Event Playground Styles */
+.interactive-area {
+    block-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.example-item {
+    border-block-start: 1px solid #eee;
+    padding-block-start: 15px;
+    margin-block-start: 15px;
+}

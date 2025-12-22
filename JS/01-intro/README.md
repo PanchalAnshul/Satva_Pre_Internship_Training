@@ -7,20 +7,6 @@
 - Basic DOM access and event listeners
 - Understand `defer` attribute for external scripts
 
-## Files
-- index.html — demo page (open in browser)
-- script.js — JavaScript logic (event handlers & examples)
-
-## How to run
-1. Open `index.html` in your browser (double-click or `Live Server` in VS Code).
-2. Open DevTools → Console to see console output.
-3. Try:
-   - Click **Console message** to write to console.
-   - Click **Show alert()** to see `alert`.
-   - Click **Show prompt()** and enter a name.
-   - Enter a name and click **Greet** to update the page.
-   - Click **Show Date/Time** to display current date/time.
-
 ## Git workflow
 ```bash
 git checkout main

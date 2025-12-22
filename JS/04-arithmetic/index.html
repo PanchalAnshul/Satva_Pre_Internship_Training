@@ -2,12 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Task 04 – Arithmetic Operators</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="calculator">
+    <div class="calculator-header">
+      <h1>Calculator</h1>
+    </div>
 
-  <h1>JavaScript Arithmetic Operators — Task 04</h1>
-  <p>Check console for all arithmetic examples (Press F12 → Console)</p>
+    <!-- Display Screen -->
+    <div class="display-container">
+      <div class="display-history" id="history"></div>
+      <div class="display" id="display">0</div>
+    </div>
+
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn btn-function" onclick="clearAll()">AC</button>
+      <button class="btn btn-function" onclick="clearEntry()">CE</button>
+      <button class="btn btn-function" onclick="backspace()">⌫</button>
+      <button class="btn btn-operator" onclick="inputOperator('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn btn-number" onclick="inputNumber('7')">7</button>
+      <button class="btn btn-number" onclick="inputNumber('8')">8</button>
+      <button class="btn btn-number" onclick="inputNumber('9')">9</button>
+      <button class="btn btn-operator" onclick="inputOperator('*')">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn btn-number" onclick="inputNumber('4')">4</button>
+      <button class="btn btn-number" onclick="inputNumber('5')">5</button>
+      <button class="btn btn-number" onclick="inputNumber('6')">6</button>
+      <button class="btn btn-operator" onclick="inputOperator('-')">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn btn-number" onclick="inputNumber('1')">1</button>
+      <button class="btn btn-number" onclick="inputNumber('2')">2</button>
+      <button class="btn btn-number" onclick="inputNumber('3')">3</button>
+      <button class="btn btn-operator" onclick="inputOperator('+')">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn btn-number" onclick="inputNumber('0')">0</button>
+      <button class="btn btn-number" onclick="inputNumber('.')">.</button>
+      <button class="btn btn-special" onclick="percentage()">%</button>
+      <button class="btn btn-equals" onclick="calculate()">=</button>
+    </div>
+
+    <!-- Extra Functions -->
+    <div class="extra-functions">
+      <button class="btn-extra" onclick="square()">x²</button>
+      <button class="btn-extra" onclick="squareRoot()">√x</button>
+      <button class="btn-extra" onclick="inverse()">1/x</button>
+      <button class="btn-extra" onclick="negate()">+/-</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

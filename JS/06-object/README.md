@@ -15,5 +15,3 @@ Understand how to create and use objects in JavaScript.
 
 ---
 
-## 🧪 How to Run
-Open `index.html` → Press F12 → Console.
