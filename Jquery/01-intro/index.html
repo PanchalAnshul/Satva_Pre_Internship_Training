@@ -1,45 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>jQuery Task 01 — Intro</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- CDN jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <style>
-    body{font-family:Arial; padding:18px; max-inline-size:900px}
-    .highlight{background:#fff9c4}
-    #log{white-space:pre-wrap; border:1px solid #eee; padding:8px; block-size:120px; overflow:auto}
-    button{margin:6px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 01 - Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+   
 </head>
 <body>
-  <h1>jQuery — Intro (Task 01)</h1>
 
-  <p><strong>Objective:</strong> learn selection, manipulation, events, simple effects and a tiny AJAX demo.</p>
+    <div class="container">
+        <h1>jQuery Introduction</h1>
+        <p class="subtitle">Practical 01 - What is jQuery & Basic Usage</p>
 
-  <div id="controls">
-    <button id="btnText">Change Text</button>
-    <button id="btnToggle">Toggle Highlight</button>
-    <button id="btnFade">Fade Box</button>
-    <button id="btnAjax">Fetch Quote</button>
-  </div>
+        <!-- What is jQuery -->
+        <div class="section">
+            <h2>1. What is jQuery?</h2>
+            <div class="info">
+                <p><strong>jQuery</strong> is a fast, small, and feature-rich JavaScript library.</p>
+                <p>It makes things like HTML document traversal, manipulation, event handling, and animation much simpler.</p>
+                <br>
+                <strong>jQuery Motto:</strong> "Write less, do more"
+            </div>
+        </div>
 
-  <div id="box" style="margin-block-start:12px; padding:12px; border:1px solid #ddd;">
-    <h2 id="title">I am a title</h2>
-    <p id="desc">Some description here. Click buttons above to see jQuery in action.</p>
-  </div>
+        <!-- jQuery Syntax -->
+        <div class="section">
+            <h2>2. jQuery Syntax</h2>
+            <div class="highlight">
+                <p><strong>Basic Syntax:</strong> <code>$(selector).action()</code></p>
+                <ul style="margin-inline-start: 20px; margin-block-start: 10px;">
+                    <li><code>$</code> - jQuery selector</li>
+                    <li><code>selector</code> - HTML element to select</li>
+                    <li><code>action()</code> - jQuery method to perform</li>
+                </ul>
+            </div>
+        </div>
 
-  <h3>Item list (delegation demo)</h3>
-  <ul id="items">
-    <li data-id="1">Item 1</li>
-    <li data-id="2">Item 2</li>
-  </ul>
-  <button id="addItem">Add Item</button>
+        <!-- Document Ready -->
+        <div class="section">
+            <h2>3. Document Ready Event</h2>
+            <div class="info">
+                <p><strong>Always wait for document to load before using jQuery:</strong></p>
+                <code>$(document).ready(function(){ ... });</code>
+                <p style="margin-block-start: 10px;">Or shorthand: <code>$(function(){ ... });</code></p>
+            </div>
+        </div>
 
-  <h3>Log</h3>
-  <div id="log"></div>
+        <!-- Basic Examples -->
+        <div class="section">
+            <h2>4. Basic jQuery Examples</h2>
+            
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Hide/Show Text</h3>
+                <p id="demoText">This is a jQuery demo text. Click buttons below!</p>
+                <button id="hideBtn">Hide Text</button>
+                <button id="showBtn">Show Text</button>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Change Text Content</h3>
+                <p id="changeText">Original Text</p>
+                <button id="changeBtn">Change Text</button>
+            </div>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Add CSS Class</h3>
+                <p id="styleText" style="padding: 10px;">Click to add background color</p>
+                <button id="styleBtn">Add Style</button>
+            </div>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Get Element Content</h3>
+                <p id="contentText">This content will be displayed below</p>
+                <button id="getBtn">Get Content</button>
+                <div class="result" id="result" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- jQuery vs JavaScript -->
+        <div class="section">
+            <h2>5. jQuery vs JavaScript</h2>
+            <div class="highlight">
+                <p><strong>Hide element in JavaScript:</strong></p>
+                <code>document.getElementById("test").style.display = "none";</code>
+                <br><br>
+                <p><strong>Hide element in jQuery:</strong></p>
+                <code>$("#test").hide();</code>
+            </div>
+            <p style="margin-block-start: 15px; color: #666;">jQuery is much simpler and cleaner!</p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="section">
+            <h2>6. jQuery Key Features</h2>
+            <div class="info">
+                <ul style="margin-inline-start: 20px;">
+                    <li> Easy to learn and use</li>
+                    <li> Cross-browser compatibility</li>
+                    <li> DOM manipulation made easy</li>
+                    <li> Event handling simplified</li>
+                    <li> AJAX support</li>
+                    <li> Animation and effects</li>
+                    <li> Large plugin ecosystem</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Practical 01 - jQuery Introduction</strong></p>
+            <p>Created by Anshul Panchal | Pre-Internship Training - Satva Solutions</p>
+        </div>
+    </div>
+
 </body>
 </html>
