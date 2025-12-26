@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Event Methods - Practical 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Event Methods Practice</h1>
+        
+        <!-- Click Events -->
+        <section class="section">
+            <h2>1. Click Events</h2>
+            <button id="clickBtn">Click Me!</button>
+            <button id="dblClickBtn">Double Click Me!</button>
+            <p id="clickResult"></p>
+        </section>
+
+        <!-- Mouse Events -->
+        <section class="section">
+            <h2>2. Mouse Events</h2>
+            <div id="mouseBox">Hover over me!</div>
+            <p id="mouseResult"></p>
+        </section>
+
+        <!-- Keyboard Events -->
+        <section class="section">
+            <h2>3. Keyboard Events</h2>
+            <input type="text" id="keyInput" placeholder="Type something...">
+            <p id="keyResult"></p>
+        </section>
+
+        <!-- Form Events -->
+        <section class="section">
+            <h2>4. Form Events</h2>
+            <form id="myForm">
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <input type="email" id="emailInput" placeholder="Enter your email">
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formResult"></p>
+        </section>
+
+        <!-- Toggle Events -->
+        <section class="section">
+            <h2>5. Toggle & Bind Events</h2>
+            <button id="toggleBtn">Toggle Content</button>
+            <div id="toggleContent" class="toggle-content">
+                <p>This content can be toggled!</p>
+            </div>
+        </section>
+
+        <!-- Event Delegation -->
+        <section class="section">
+            <h2>6. Event Delegation</h2>
+            <button id="addItem">Add Item</button>
+            <ul id="itemList">
+                <li>Item 1 <button class="deleteBtn">Delete</button></li>
+                <li>Item 2 <button class="deleteBtn">Delete</button></li>
+            </ul>
+        </section>
+
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
