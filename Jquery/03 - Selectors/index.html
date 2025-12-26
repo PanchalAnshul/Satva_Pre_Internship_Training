@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 03 - Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Selectors</h1>
+        <p class="subtitle">Practical 03 - All jQuery Selector Types</p>
+
+        <!-- Basic Selectors -->
+        <div class="section">
+            <h2>1. Basic Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>*</code></td>
+                    <td><code>$("*")</code></td>
+                    <td>All elements</td>
+                </tr>
+                <tr>
+                    <td><code>element</code></td>
+                    <td><code>$("p")</code></td>
+                    <td>All &lt;p&gt; elements</td>
+                </tr>
+                <tr>
+                    <td><code>#id</code></td>
+                    <td><code>$("#test")</code></td>
+                    <td>Element with id="test"</td>
+                </tr>
+                <tr>
+                    <td><code>.class</code></td>
+                    <td><code>$(".intro")</code></td>
+                    <td>All class="intro"</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <p class="item">Paragraph 1</p>
+                <p class="item">Paragraph 2</p>
+                <p id="special" class="item2">With ID</p>
+                <button id="btn1">Select All p</button>
+                <button id="btn2">Select by ID</button>
+                <button id="btn3">Select by Class</button>
+                <button id="reset1">Reset</button>
+            </div>
+        </div>
+
+        <!-- Attribute Selectors -->
+        <div class="section">
+            <h2>2. Attribute Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <!-- <tr>
+                    <td><code>[attribute]</code></td>
+                    <td><code>$("[href]")</code></td>
+                    <td>Elements with href attribute</td>
+                </tr> -->
+                <tr>
+                    <td><code>[attribute=value]</code></td>
+                    <td><code>$("[type='text']")</code></td>
+                    <td>Elements with type="text"</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <input type="text" placeholder="Text input">
+                <input type="email" placeholder="Email input">
+                <input type="password" placeholder="Password input">
+                <br><br>
+                <button id="btn4">Select [type='text']</button>
+                <button id="btn6">Select [type='email']</button>
+                <button id="btn5">Select [type]</button>
+                <button id="reset2">Reset</button>
+            </div>
+        </div>
+
+        <!-- Position Selectors -->
+        <div class="section">
+            <h2>3. Position Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>:first</code></td>
+                    <td><code>$("p:first")</code></td>
+                    <td>First &lt;p&gt; element</td>
+                </tr>
+                <tr>
+                    <td><code>:last</code></td>
+                    <td><code>$("p:last")</code></td>
+                    <td>Last &lt;p&gt; element</td>
+                </tr>
+                <tr>
+                    <td><code>:even</code></td>
+                    <td><code>$("tr:even")</code></td>
+                    <td>Even elements (0,2,4...)</td>
+                </tr>
+                <tr>
+                    <td><code>:odd</code></td>
+                    <td><code>$("tr:odd")</code></td>
+                    <td>Odd elements (1,3,5...)</td>
+                </tr>
+                <tr>
+                    <td><code>:eq(n)</code></td>
+                    <td><code>$("p:eq(2)")</code></td>
+                    <td>Element at index n</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <p class="pos" id="id1">Position Item 1</p>
+                <p class="pos" id="id2">Position Item 2</p>
+                <p class="pos" id="id3">Position Item 3</p>
+                <p class="pos" id="id4">Position Item 4</p>
+                <p class="pos" id="id5">Position Item 5</p>
+                <button id="btn111">:first</button>
+                <button id="btn7">:last</button>
+                <button id="btn8">:even</button>
+                <button id="btn9">:odd</button>
+                <button id="btn10">:eq(2)</button>
+                <button id="reset3">Reset</button>
+            </div>
+        </div>
+
+        <!-- Child Selectors -->
+        <div class="section">
+            <h2>4. Child & Relationship Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>parent > child</code></td>
+                    <td><code>$("div > p")</code></td>
+                    <td>Direct children</td>
+                </tr>
+                <tr>
+                    <td><code>:first-child</code></td>
+                    <td><code>$("p:first-child")</code></td>
+                    <td>First child of parent</td>
+                </tr>
+                <tr>
+                    <td><code>:last-child</code></td>
+                    <td><code>$("p:last-child")</code></td>
+                    <td>Last child of parent</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <div id="parent">
+                    <p class="child">First child</p>
+                    <p class="child">Second child</p>
+                    <p class="child">Third child</p>
+                    <p class="child">Last child</p>
+                </div>
+                <button id="btn11">:first-child</button>
+                <button id="btn12">:last-child</button>
+                <button id="btn13">All children</button>
+                <button id="reset4">Reset</button>
+            </div>
+        </div>
+
+        <!-- Form Selectors -->
+        <div class="section">
+            <h2>5. Form Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>:input</code></td>
+                    <td><code>$(":input")</code></td>
+                    <td>All input elements</td>
+                </tr>
+                <tr>
+                    <td><code>:text</code></td>
+                    <td><code>$(":text")</code></td>
+                    <td>All text inputs</td>
+                </tr>
+                <tr>
+                    <td><code>:checkbox</code></td>
+                    <td><code>$(":checkbox")</code></td>
+                    <td>All checkboxes</td>
+                </tr>
+                <tr>
+                    <td><code>:checked</code></td>
+                    <td><code>$(":checked")</code></td>
+                    <td>Checked elements</td>
+                </tr>
+                <tr>
+                    <td><code>:disabled</code></td>
+                    <td><code>$(":disabled")</code></td>
+                    <td>Disabled elements</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <input type="text" placeholder="Name" class="form-input">
+                <input type="email" placeholder="Email" class="form-input">
+                <input type="checkbox" id="check1"> Check 1
+                <input type="checkbox" id="check2"> Check 2
+                <input type="text" placeholder="Disabled" disabled>
+                <br><br>
+                <button id="btn14">Select :text</button>
+                <button id="btn15">Select :checkbox</button>
+                <button id="btn16">Select :disabled</button>
+                <button id="reset5">Reset</button>
+            </div>
+        </div>
+
+        <!-- Visibility Selectors -->
+        <div class="section">
+            <h2>6. Visibility Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>:visible</code></td>
+                    <td><code>$("p:visible")</code></td>
+                    <td>Visible elements</td>
+                </tr>
+                <tr>
+                    <td><code>:hidden</code></td>
+                    <td><code>$("p:hidden")</code></td>
+                    <td>Hidden elements</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <p class="vis" style="display:block;">Visible paragraph 1</p>
+                <p class="vis" style="display:none;">Hidden paragraph</p>
+                <p class="vis" style="display:block;">Visible paragraph 2</p>
+                <button id="btn17">Select :visible</button>
+                <button id="btn18">Show :hidden</button>
+                <button id="reset6">Reset</button>
+            </div>
+        </div>
+
+        <!-- Content Selectors -->
+        <div class="section">
+            <h2>7. Content Selectors</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>:contains(text)</code></td>
+                    <td><code>$("p:contains('jQuery')")</code></td>
+                    <td>Contains specific text</td>
+                </tr>
+                <tr>
+                    <td><code>:empty</code></td>
+                    <td><code>$("p:empty")</code></td>
+                    <td>Empty elements</td>
+                </tr>
+                <tr>
+                    <td><code>:has(selector)</code></td>
+                    <td><code>$("div:has(p)")</code></td>
+                    <td>Contains selector</td>
+                </tr>
+            </table>
+
+            <div class="demo">
+                <p class="content">This contains jQuery text</p>
+                <p class="content">This is JavaScript</p>
+                <p class="content">Learning jQuery selectors</p>
+                <p class="content"></p>
+                <button id="btn19">:contains('jQuery')</button>
+                <button id="btn20">:empty</button>
+                <button id="reset7">Reset</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Practical 03 - jQuery Selectors</strong></p>
+        </div>
+    </div>
+</body>
+</html>
