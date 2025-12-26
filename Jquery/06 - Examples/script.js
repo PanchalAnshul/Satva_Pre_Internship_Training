@@ -46,16 +46,6 @@ $(document).ready(function() {
         $('#displayText').text('Text changed using .text() method!');
     });
     
-    // Change attribute with attr()
-    $('#btnChangeAttr').click(function() {
-        var currentWidth = $('#demoImg').attr('width');
-        var newWidth = currentWidth == 100 ? 200 : 100;
-        $('#demoImg').attr({
-            'width': newWidth,
-            'alt': 'Resized to ' + newWidth + 'px'
-        });
-    });
-
     // ========== APPEND & REMOVE ==========
     
     var itemCount = 2;
@@ -121,27 +111,18 @@ $(document).ready(function() {
     // Filter even items
     $('#btnFilterEven').click(function() {
         $('#filterList li').removeClass('highlight');
-        $('#filterList li:even').addClass('highlight');
+        $('#filterList li:odd').addClass('highlight');
     });
     
     // Filter odd items
     $('#btnFilterOdd').click(function() {
         $('#filterList li').removeClass('highlight');
-        $('#filterList li:odd').addClass('highlight');
+        $('#filterList li:even').addClass('highlight');
     });
     
     // Reset filtering
     $('#btnResetFilter').click(function() {
         $('#filterList li').removeClass('highlight');
-    });
-
-    // ========== BONUS: Child selector demonstration ==========
-    
-    // Double click on any child to show parent info
-    $('.child').dblclick(function() {
-        var childIndex = $(this).index();
-        var parentId = $(this).parent().attr('id');
-        alert('Child index: ' + childIndex + '\nParent ID: ' + parentId);
     });
 
 });
