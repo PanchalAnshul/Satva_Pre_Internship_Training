@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-block-size: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-inline-size: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-block-end: 30px;
+    font-size: 2.2em;
+}
+
+.section {
+    margin-block-end: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-inline-start: 4px solid #667eea;
+}
+
+h2 {
+    color: #667eea;
+    margin-block-end: 15px;
+    font-size: 1.4em;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+input[type="text"],
+input[type="email"] {
+    inline-size: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+#mouseBox {
+    inline-size: 100%;
+    block-size: 150px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#mouseBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-block-start: 10px;
+    border: 2px solid #667eea;
+}
+
+#itemList {
+    list-style: none;
+    margin-block-start: 15px;
+}
+
+#itemList li {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+#itemList li:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.deleteBtn {
+    background: #e74c3c;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.deleteBtn:hover {
+    background: #c0392b;
+}
+
+p {
+    margin-block-start: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    color: #333;
+    min-block-size: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#formResult {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.highlight {
+    background: #fff3cd !important;
+    border: 2px solid #ffc107 !important;
+}
