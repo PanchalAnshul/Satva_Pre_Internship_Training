@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 04 - Traversing Filtering</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Traversing - Filtering</h1>
+        <p class="subtitle">Practical 04 - Filter and Navigate DOM Elements</p>
+
+        <!-- first() Method -->
+        <div class="section">
+            <h2>1. first() Method</h2>
+            <p class="info">Returns the first element of selected elements</p>
+            
+            <div class="demo">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+                <div class="box">Box 4</div>
+                <button id="btn1">Select first()</button>
+                <button id="reset1">Reset</button>
+            </div>
+
+            <div class="code">$("div").first()</div>
+        </div>
+
+        <!-- last() Method -->
+        <div class="section">
+            <h2>2. last() Method</h2>
+            <p class="info">Returns the last element of selected elements</p>
+            
+            <div class="demo">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <button id="btn2">Select last()</button>
+                <button id="reset2">Reset</button>
+            </div>
+
+            <div class="code">$("div").last()</div>
+        </div>
+
+        <!-- eq() Method -->
+        <div class="section">
+            <h2>3. eq() Method</h2>
+            <p class="info">Returns element at specific index (0-based)</p>
+            
+            <div class="demo">
+                <p class="para">Paragraph 0</p>
+                <p class="para">Paragraph 1</p>
+                <p class="para">Paragraph 2</p>
+                <p class="para">Paragraph 3</p>
+                <p class="para">Paragraph 4</p>
+                <button id="btn3">eq(2)</button>
+                <button id="btn4">eq(0)</button>
+                <button id="btn5">eq(-1)</button>
+                <button id="reset3">Reset</button>
+            </div>
+
+            <div class="code">$("p").eq(2)  // Index 2<br>$("p").eq(-1) // Last element</div>
+        </div>
+
+        <!-- filter() Method -->
+        <div class="section">
+            <h2>4. filter() Method</h2>
+            <p class="info">Returns elements that match a specific criteria</p>
+            
+            <div class="demo">
+                <p class="text intro">Introduction paragraph</p>
+                <p class="text">Regular paragraph</p>
+                <p class="text intro">Another intro</p>
+                <p class="text">Normal text</p>
+                <button id="btn6">filter(".intro")</button>
+                <button id="btn7">filter(":even")</button>
+                <button id="reset4">Reset</button>
+            </div>
+
+            <div class="code">$("p").filter(".intro")<br>$("p").filter(":even")</div>
+        </div>
+
+        <!-- not() Method -->
+        <div class="section">
+            <h2>5. not() Method</h2>
+            <p class="info">Returns elements that do NOT match criteria (opposite of filter)</p>
+            
+            <div class="demo">
+                <div class="element special">Special element</div>
+                <div class="element">Normal element</div>
+                <div class="element special">Another special</div>
+                <div class="element">Regular element</div>
+                <button id="btn8">not(".special")</button>
+                <button id="btn9">not(":first")</button>
+                <button id="reset5">Reset</button>
+            </div>
+
+            <div class="code">$("div").not(".special")<br>$("div").not(":first")</div>
+        </div>
+
+        <!-- has() Method -->
+        <div class="section">
+            <h2>6. has() Method</h2>
+            <p class="info">Returns elements that contain specific child elements</p>
+            
+            <div class="demo">
+                <div class="container-box">
+                    <p>This div has a paragraph</p>
+                </div>
+                <div class="container-box">
+                    <span>This div has a span</span>
+                </div>
+                <div class="container-box">
+                    <p>Another div with paragraph</p>
+                </div>
+                <button id="btn10">has("p")</button>
+                <button id="btn11">has("span")</button>
+                <button id="reset6">Reset</button>
+            </div>
+
+            <div class="code">$("div").has("p")</div>
+        </div>
+
+        <!-- is() Method -->
+        <div class="section">
+            <h2>7. is() Method</h2>
+            <p class="info">Checks if element matches selector (returns true/false)</p>
+            
+            <div class="demo">
+                <p id="test1" class="active">Paragraph with class="active"</p>
+                <p id="test2">Paragraph without class</p>
+                <button id="btn12">Check if #test1 is(".active")</button>
+                <button id="btn13">Check if #test2 is(".active")</button>
+                <div class="result" id="result1"></div>
+            </div>
+
+            <div class="code">$("#test1").is(".active") // Returns true/false</div>
+        </div>
+
+        <!-- slice() Method -->
+        <div class="section">
+            <h2>8. slice() Method</h2>
+            <p class="info">Returns subset of elements based on index range</p>
+            
+            <div class="demo">
+                <div class="num">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <button id="btn14">slice(1, 4)</button>
+                <button id="btn15">slice(2)</button>
+                <button id="btn16">slice(-3)</button>
+                <button id="reset7">Reset</button>
+            </div>
+
+            <div class="code">$("div").slice(1, 4) // Index 1 to 3<br>$("div").slice(2)    // From index 2 to end<br>$("div").slice(-3)   // Last 3 elements</div>
+        </div>
+
+        <!-- map() Method -->
+        <div class="section">
+            <h2>9. map() Method</h2>
+            <p class="info">Creates new array by passing each element through a function</p>
+            
+            <div class="demo">
+                <input type="text" value="Apple" class="fruit">
+                <input type="text" value="Banana" class="fruit">
+                <input type="text" value="Orange" class="fruit">
+                <button id="btn17">Get All Values with map()</button>
+                <div class="result" id="result2"></div>
+            </div>
+
+            <div class="code">$(".fruit").map(function() { return $(this).val(); })</div>
+        </div>
+
+        <!-- Summary Table -->
+        <div class="section">
+            <h2>📋 Filtering Methods Summary</h2>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>first()</code></td>
+                    <td>First element</td>
+                    <td><code>$("p").first()</code></td>
+                </tr>
+                <tr>
+                    <td><code>last()</code></td>
+                    <td>Last element</td>
+                    <td><code>$("p").last()</code></td>
+                </tr>
+                <tr>
+                    <td><code>eq(index)</code></td>
+                    <td>Element at index</td>
+                    <td><code>$("p").eq(2)</code></td>
+                </tr>
+                <tr>
+                    <td><code>filter(selector)</code></td>
+                    <td>Match criteria</td>
+                    <td><code>$("p").filter(".intro")</code></td>
+                </tr>
+                <tr>
+                    <td><code>not(selector)</code></td>
+                    <td>Don't match criteria</td>
+                    <td><code>$("p").not(".intro")</code></td>
+                </tr>
+                <tr>
+                    <td><code>has(selector)</code></td>
+                    <td>Contains child</td>
+                    <td><code>$("div").has("p")</code></td>
+                </tr>
+                <tr>
+                    <td><code>is(selector)</code></td>
+                    <td>Check if matches</td>
+                    <td><code>$("#test").is(".active")</code></td>
+                </tr>
+                <tr>
+                    <td><code>slice(start, end)</code></td>
+                    <td>Index range</td>
+                    <td><code>$("p").slice(1, 4)</code></td>
+                </tr>
+                <tr>
+                    <td><code>map(function)</code></td>
+                    <td>Transform elements</td>
+                    <td><code>$("input").map(...)</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p><strong>Practical 04 - jQuery Traversing Filtering</strong></p>
+        </div>
+    </div>
+</body>
+</html>
