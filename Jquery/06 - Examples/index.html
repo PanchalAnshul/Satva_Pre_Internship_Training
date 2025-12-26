@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practical Examples</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Practical Examples</h1>
+
+        <!-- Selectors & Events Section -->
+        <section class="demo-section">
+            <h2>Selectors & Events</h2>
+            <button id="btnClick">Click Me!</button>
+            <button class="btnHover">Hover Over Me</button>
+            <p id="output">Output will appear here</p>
+        </section>
+
+        <!-- Show/Hide Section -->
+        <section class="demo-section">
+            <h2>Show/Hide Effects</h2>
+            <button id="btnToggle">Toggle Box</button>
+            <button id="btnFade">Fade Toggle</button>
+            <div id="box" class="box">This is a toggleable box!</div>
+        </section>
+
+        <!-- Text, Val, Attr Section -->
+        <section class="demo-section">
+            <h2>Text, Val & Attributes</h2>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="btnGetVal">Get Value</button>
+            <button id="btnSetText">Set Text</button>
+            <p id="displayText">Text will appear here</p>
+            <img id="demoImg" src="https://via.placeholder.com/100" alt="Demo Image" width="100">
+            <button id="btnChangeAttr">Change Image Size</button>
+        </section>
+
+        <!-- Append & Remove Section -->
+        <section class="demo-section">
+            <h2>Append & Remove</h2>
+            <button id="btnAddItem">Add Item</button>
+            <button id="btnRemoveLast">Remove Last Item</button>
+            <ul id="itemList">
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </section>
+
+        <!-- CSS Manipulation Section -->
+        <section class="demo-section">
+            <h2>CSS Manipulation</h2>
+            <button id="btnChangeColor">Change Color</button>
+            <button id="btnAddClass">Toggle Highlight</button>
+            <div id="cssBox" class="box">Style me with jQuery!</div>
+        </section>
+
+        <!-- Parent, Child, Traversing Section -->
+        <section class="demo-section">
+            <h2>Parent, Child & Traversing</h2>
+            <div id="parentBox" class="parent-box">
+                <p>Parent Element</p>
+                <div class="child">Child 1</div>
+                <div class="child">Child 2</div>
+                <div class="child">Child 3</div>
+            </div>
+            <button id="btnHighlightFirst">Highlight First Child</button>
+            <button id="btnHighlightLast">Highlight Last Child</button>
+            <button id="btnHighlightEq">Highlight 2nd Child (eq)</button>
+            <button id="btnParentStyle">Style Parent</button>
+        </section>
+
+        <!-- Filtering Section -->
+        <section class="demo-section">
+            <h2>Filtering</h2>
+            <button id="btnFilterEven">Highlight Even Items</button>
+            <button id="btnFilterOdd">Highlight Odd Items</button>
+            <button id="btnResetFilter">Reset</button>
+            <ul id="filterList">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                <li>List Item 6</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
