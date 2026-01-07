@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 02 - Syntax</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>jQuery Syntax</h1>
+        <p class="subtitle">Practical 02 - Understanding jQuery Syntax Structure</p>
+
+        <!-- Basic Syntax -->
+        <div class="section">
+            <h2>1. Basic jQuery Syntax</h2>
+            <div class="info">
+                <p><strong>The jQuery syntax is tailor-made for selecting HTML elements and performing actions on
+                        them.</strong></p>
+            </div>
+
+            <div class="syntax-box">
+                <span class="keyword">$</span>(<span class="string">selector</span>).<span
+                    class="keyword">action</span>()
+
+                <span class="comment">// $ - jQuery sign/alias</span>
+                <span class="comment">// selector - finds HTML elements</span>
+                <span class="comment">// action() - jQuery method to perform</span>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Examples:</strong></p>
+                <p><code>$(this).hide()</code> - hides the current element</p>
+                <p><code>$("p").hide()</code> - hides all &lt;p&gt; elements</p>
+                <p><code>$(".test").hide()</code> - hides all elements with class="test"</p>
+                <p><code>$("#test").hide()</code> - hides element with id="test"</p>
+            </div>
+        </div>
+
+        <!-- Document Ready -->
+        <div class="section">
+            <h2>2. Document Ready Event</h2>
+            <div class="info">
+                <p><strong>Prevent jQuery code from running before the document is fully loaded:</strong></p>
+            </div>
+
+            <div class="syntax-box">
+                <span class="comment">// Full syntax</span>
+                <span class="keyword">$(document).ready</span>(<span class="keyword">function</span>() {
+                <span class="comment">// jQuery methods go here...</span>
+                });
+
+                <span class="comment">// Shorthand syntax (recommended)</span>
+                <span class="keyword">$</span>(<span class="keyword">function</span>() {
+                <span class="comment">// jQuery methods go here...</span>
+                });
+            </div>
+        </div>
+
+        <!-- Selectors Demo -->
+        <div class="section">
+            <h2>3. jQuery Selectors - Practical Examples</h2>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Element Selector</h3>
+                <p class="test-element">This is a paragraph element</p>
+                <p class="test-element">Another paragraph element</p>
+                <button id="selectElement">Select All &lt;p&gt; Elements</button>
+                <button id="resetElement">Reset</button>
+            </div>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">ID Selector</h3>
+                <p id="uniqueElement" class="test-element">Element with ID="uniqueElement"</p>
+                <button id="selectId">Select by ID (#uniqueElement)</button>
+                <button id="resetId">Reset</button>
+            </div>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Class Selector</h3>
+                <p class="demo">First element with class="demo"</p>
+                <p class="demo">Second element with class="demo"</p>
+                <p class="demo">Third element with class="demo"</p>
+                <button id="selectClass">Select by Class (.demo)</button>
+                <button id="resetClass">Reset</button>
+            </div>
+        </div>
+
+        <!-- More Selectors -->
+        <div class="section">
+            <h2>4. More jQuery Selectors</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Selects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td><code>$("*")</code></td>
+                        <td>All elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>element</code></td>
+                        <td><code>$("p")</code></td>
+                        <td>All &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>#id</code></td>
+                        <td><code>$("#test")</code></td>
+                        <td>Element with id="test"</td>
+                    </tr>
+                    <tr>
+                        <td><code>.class</code></td>
+                        <td><code>$(".demo")</code></td>
+                        <td>All elements with class="demo"</td>
+                    </tr>
+                    <tr>
+                        <td><code>:first</code></td>
+                        <td><code>$("p:first")</code></td>
+                        <td>First &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><code>:last</code></td>
+                        <td><code>$("p:last")</code></td>
+                        <td>Last &lt;p&gt; element</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Special Selectors Demo</h3>
+                <p class="selector-demo">First paragraph</p>
+                <p class="selector-demo">Second paragraph</p>
+                <p class="selector-demo">Third paragraph</p>
+                <p class="selector-demo">Fourth paragraph</p>
+
+                <button id="selectFirst">Select :first</button>
+                <button id="selectLast">Select :last</button>
+                <button id="selectEven">Select :even</button>
+                <button id="selectOdd">Select :odd</button>
+                <button id="resetSpecial">Reset All</button>
+            </div>
+        </div>
+
+        <!-- This Keyword -->
+        <div class="section">
+            <h2>5. The $(this) Selector</h2>
+            <div class="info">
+                <p><strong>$(this)</strong> refers to the current HTML element being acted upon.</p>
+            </div>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">Click Any Button ($(this) Demo)</h3>
+                <button class="thisDemo">Button 1</button>
+                <button class="thisDemo">Button 2</button>
+                <button class="thisDemo">Button 3</button>
+                <button class="thisDemo">Button 4</button>
+                <div class="result" id="thisResult"></div>
+            </div>
+        </div>
+
+        <!-- Actions/Methods -->
+        <div class="section">
+            <h2>6. Common jQuery Actions</h2>
+
+            <div class="demo-box">
+                <h3 style="margin-block-end: 10px;">jQuery Methods Demo</h3>
+                <p id="actionDemo" class="test-element">This text will be modified by jQuery methods</p>
+
+                <button id="hideAction">hide()</button>
+                <button id="showAction">show()</button>
+                <button id="toggleAction">toggle()</button>
+                <button id="fadeAction">fadeOut()</button>
+                <button id="slideAction">slideUp()</button>
+                <button id="textAction">text()</button>
+                <button id="htmlAction">html()</button>
+                <button id="resetAction">Reset</button>
+            </div>
+        </div>
+
+        <!-- Syntax Summary -->
+        <div class="section">
+            <h2>7. Syntax Summary</h2>
+            <div class="highlight">
+                <p><strong>Remember:</strong></p>
+                <ul style="margin-inline-start: 20px; margin-block-start: 10px;">
+                    <li> Always use <code>$()</code> to access jQuery</li>
+                    <li> Use <code>$(document).ready()</code> or <code>$(function(){})</code></li>
+                    <li> Selectors use CSS syntax: <code>#id</code>, <code>.class</code>, <code>element</code></li>
+                    <li> Chain methods: <code>$("p").hide().show()</code></li>
+                    <li> Use <code>$(this)</code> for current element</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Practical 02 - jQuery Syntax</strong></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
